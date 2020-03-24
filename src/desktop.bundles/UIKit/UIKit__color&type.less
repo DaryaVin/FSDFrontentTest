@@ -1,0 +1,95 @@
+@import '../../common.blocks/baseStyle/baseStyle.less';
+
+.PresentationBlock {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1006px;
+  min-width: 700px;
+  margin: 145px 20px 0;
+}
+.PresentationBlock__color {
+  
+}
+
+.colorBox {
+  display: flex;
+  width: 270px;
+  margin-bottom: 20px;
+}
+
+.colorBox__colorDemonstration {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  margin-right: 40px;
+}
+
+.colorBox__colorDemonstration_color_color1 {
+  background: @color1;
+}
+.colorBox__colorDemonstration_color_color1Opacity75 {
+  background: @color1Opacity75;
+}
+.colorBox__colorDemonstration_color_color1Opacity50 {
+  background: @color1Opacity50;
+}
+.colorBox__colorDemonstration_color_color1Opacity25 {
+  background: @color1Opacity25;
+}
+.colorBox__colorDemonstration_color_color1Opacity05 {
+  background: @color1Opacity05;
+}
+.colorBox__colorDemonstration_color_color2 {
+  background: @color2;
+}
+.colorBox__colorDemonstration_color_color3 {
+  background: @color3;
+}
+.colorBox__Discription {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  & h2 {
+    line-height: 29px;
+  };
+  & h2:last-child {
+    font-weight: normal;
+  };
+}
+
+
+.PresentationBlock__text {
+  min-width: 100px;
+  max-width: 400px;
+ 
+
+  & :nth-child(1n) {
+    margin-bottom: 50px;
+    display: flex;
+    
+  }
+  & :nth-child(1n)::before {
+    margin-right: 30px;
+    text-align: right;
+    font-weight: normal;
+    color: @color1Opacity25;
+  }
+  & :nth-child(1n)::before {
+    content: 'Body';
+  }
+  & h1:nth-child(1n)::before {
+    content: 'H1';
+    margin-left: 8px;
+  }
+  & h2:nth-child(1n)::before {
+    content: 'H2';
+    margin-left: 10px;
+  }
+  & h3:nth-child(1n)::before {
+    content: 'H3';
+    margin-left: 20px;
+  }
+  
+}
+

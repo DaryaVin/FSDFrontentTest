@@ -49,7 +49,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: ['@babel/polyfill',  './desktop.bundles/UIKit/UIKit.js']
+    main: ['@babel/polyfill',  './desktop.bundles/UIKit/UIKit__color&type.js']
   },
   output: {
     filename: filename('js'),
@@ -57,10 +57,9 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src/desktop.bundles'),
+      '@bundles': path.resolve(__dirname, 'src/desktop.bundles'),
       '@desktop': path.resolve(__dirname, 'src/desktop.blocks'),
-      '@common': path.resolve(__dirname, 'src/common.blocks')
-      
+      '@common': path.resolve(__dirname, 'src/common.blocks'),
     }
   },
   optimization: optimization(),
@@ -71,7 +70,7 @@ module.exports = {
   devtool: isDev ? 'source-map' : '',
   plugins: [
     new HTMLWebpackPlugin({
-      template: './desktop.bundles/UIKit/UIKit.pug',
+      template: './desktop.bundles/UIKit/UIKit__color&type.pug',
       minify: {
         collapseWhitespace: isProd
       }
