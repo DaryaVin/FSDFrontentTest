@@ -1,8 +1,9 @@
 doctype html
 html(lang="en")
   head
-    title= pageTitle
   body
+    include ../../common.blocks/logo/logo.pug
+    +logo("c","UIKitColorType__logo")
     .PresentationBlock
       .PresentationBlock__color
         -

@@ -49,7 +49,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: ['@babel/polyfill',  './desktop.bundles/UIKit/UIKit__color&type.js']
+    main: ['@babel/polyfill',  './desktop.bundles/UIKit/UIKit.js']
   },
   output: {
     filename: filename('js'),
@@ -70,7 +70,7 @@ module.exports = {
   devtool: isDev ? 'source-map' : '',
   plugins: [
     new HTMLWebpackPlugin({
-      template: './desktop.bundles/UIKit/UIKit__color&type.pug',
+      template: './desktop.bundles/UIKit/UIKit.pug',
       minify: {
         collapseWhitespace: isProd
       }
