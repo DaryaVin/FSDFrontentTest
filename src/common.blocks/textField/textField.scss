@@ -1,0 +1,29 @@
+@import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins.scss';
+
+.textField {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.textField__label {
+  @include h3;
+  padding-bottom: 5px;
+}
+
+.textField__input  {
+  box-sizing: border-box;
+  border: 1px solid $color1Opacity25;
+  border-radius: 4px;
+  padding: 12px 15px;
+  width: 320px;
+  outline: none;
+  @include baseText;
+  line-height: 18px;
+  color: $color1Opacity25;
+  &:hover, &:focus {
+    border-color: $color1Opacity50;
+    color: $color1Opacity75;
+  }
+}

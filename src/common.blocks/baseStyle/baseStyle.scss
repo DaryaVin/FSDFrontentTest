@@ -1,23 +1,25 @@
 @import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins.scss';
 
-@font-face {
-  font-family: Quicksand;
-  src: url("./Quicksand/Quicksand-VariableFont_wght.ttf");
-}
-@font-face {
-  font-family: Quicksand;
-  src: url("./Quicksand/static/Quicksand-Bold.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("./Montserrat/Montserrat-Regular.ttf");
-}
-@font-face {
-  font-family: Montserrat;
-  src: url("./Montserrat/Montserrat-Bold.ttf");
-  font-weight: bold;
-}
+
+// @font-face {
+//   font-family: Quicksand;
+//   src: url("./Quicksand/Quicksand-VariableFont_wght.ttf");
+// }
+// @font-face {
+//   font-family: Quicksand;
+//   src: url("./Quicksand/static/Quicksand-Bold.ttf");
+//   font-weight: bold;
+// }
+// @font-face {
+//   font-family: Montserrat;
+//   src: url("./Montserrat/Montserrat-Regular.ttf");
+// }
+// @font-face {
+//   font-family: Montserrat;
+//   src: url("./Montserrat/Montserrat-Bold.ttf");
+//   font-weight: bold;
+// }
 
 * {
   padding: 0;
@@ -25,38 +27,21 @@
 }
 
 body {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  @include baseText;
   color: $color1Opacity75;
 }
 
 h1 {
-  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
+  @include h1;
   color: $color1;
 }
 
 h2 {
-  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 24px;
+  @include h2;
   color: $color1;
 }
 
 h3 {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
+  @include h3;
   color: $color1;
 }

@@ -3,17 +3,18 @@
 .UIKitColorType__logo {
   margin: 30px;
 }
-.PresentationBlock {
+body > * {
+  margin: 40px 20px 0;
+}
+.colorAndType {
   display: flex;
   justify-content: space-around;
-  max-width: 1006px;
+  max-width: 1920px;
   min-width: 700px;
-  margin: 145px 20px 0;
 }
 .PresentationBlock__color {
   
 }
-
 .colorBox {
   display: flex;
   width: 270px;
@@ -26,7 +27,6 @@
   border-radius: 6px;
   margin-right: 40px;
 }
-
 .colorBox__colorDemonstration_color_color1 {
   background: $color1;
 }
@@ -48,6 +48,7 @@
 .colorBox__colorDemonstration_color_color3 {
   background: $color3;
 }
+
 .colorBox__Discription {
   display: flex;
   align-items: flex-start;
@@ -60,7 +61,6 @@
     font-weight: normal;
   };
 }
-
 
 .PresentationBlock__text {
   min-width: 100px;

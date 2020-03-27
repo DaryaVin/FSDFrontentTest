@@ -57,6 +57,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      '@': path.resolve(__dirname, 'src'),
       '@bundles': path.resolve(__dirname, 'src/desktop.bundles'),
       '@desktop': path.resolve(__dirname, 'src/desktop.blocks'),
       '@common': path.resolve(__dirname, 'src/common.blocks'),
