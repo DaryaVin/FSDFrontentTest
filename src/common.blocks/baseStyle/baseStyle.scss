@@ -1,12 +1,5 @@
-@color1: #1F2041;
-@color1Opacity75: rgba(31, 32, 65, 0.75);
-@color1Opacity50: rgba(31, 32, 65, 0.5);
-@color1Opacity25: rgba(31, 32, 65, 0.25);
-@color1Opacity05: rgba(31, 32, 65, 0.05);
-@color2: #BC9CFF;
-@color2Gradiend: #8BA4F9;
-@color3: #6FCF97;
-@color3Gradiend: #66D2EA;
+@import '../сolorVariables/сolorVariables';
+
 @font-face {
   font-family: Quicksand;
   src: url("./Quicksand/Quicksand-VariableFont_wght.ttf");
@@ -37,7 +30,7 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  color: @color1Opacity75;
+  color: $color1Opacity75;
 }
 
 h1 {
@@ -46,7 +39,7 @@ h1 {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
-  color: @color1;
+  color: $color1;
 }
 
 h2 {
@@ -55,7 +48,7 @@ h2 {
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
-  color: @color1;
+  color: $color1;
 }
 
 h3 {
@@ -65,5 +58,5 @@ h3 {
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-  color: @color1;
+  color: $color1;
 }

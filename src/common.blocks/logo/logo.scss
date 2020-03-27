@@ -1,25 +1,24 @@
-@import '../baseStyle/baseStyle.less';
-
+@import '../сolorVariables/сolorVariables';
 
 linearGradient#color2LinearGradient {
-  & stop:first-child {
+  stop:first-child {
     offset: 0%;
-    stop-color: @color2;
+    stop-color: $color2;
   }
-  & stop:last-child {
+  stop:last-child {
     offset: 100%;
-    stop-color: @color2Gradiend;
+    stop-color: $color2Gradiend;
   }
 }
 
 linearGradient#color3LinearGradient {
-  & stop:first-child {
+  stop:first-child {
     offset: 0%;
-    stop-color: @color3;
+    stop-color: $color3;
   }
-  & stop:last-child {
+  stop:last-child {
     offset: 100%;
-    stop-color: @color3Gradiend;
+    stop-color: $color3Gradiend;
   }
 }
 
@@ -38,8 +37,8 @@ linearGradient#color3LinearGradient {
   width: 48px;
   height: 48px;
 
-  & path {
-    fill: @color1Opacity25;
+  path {
+    fill: $color1Opacity25;
   }
 }
 
@@ -70,8 +69,8 @@ linearGradient#color3LinearGradient {
   display: inline-block;
   width: 54px;
   height: 14px;
-  & path {
-    fill: @color1;
+  path {
+    fill: $color1;
   }
 }
 

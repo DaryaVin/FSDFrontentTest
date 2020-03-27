@@ -108,6 +108,10 @@ module.exports = {
         use: cssLoaders('less-loader')
       },
       {
+        test: /\.s[ac]ss$/,
+        use: cssLoaders('sass-loader')
+      },
+      {
         test: /\.(png|jpg|svg|gif|ttf|woff|woff2|eot)$/,
         use: ['file-loader']
       },

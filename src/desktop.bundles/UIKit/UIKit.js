@@ -1,3 +1,3 @@
-import '@common/baseStyle/baseStyle.less';
-import './UIKit.less';
-import '@common/logo/logo.less';
+import '@common/baseStyle/baseStyle.scss';
+import './UIKit.scss';
+import '@common/logo/logo.scss';
