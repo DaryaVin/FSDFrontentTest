@@ -4,6 +4,7 @@ html(lang="en")
   body
     include ../../common.blocks/logo/logo.pug
     include ../../common.blocks/textField/textField.pug
+    include ../../common.blocks/dropdownField/dropdownField.pug
     .colorAndType
       .PresentationBlock__color
         -
@@ -18,7 +19,7 @@ html(lang="en")
             ];
         each item in colorItem
           .colorBox
-            .colorBox__colorDemonstration(class='colorBox__colorDemonstration_color_' + item.color)
+            .colorBox__colorDemonstration(class="colorBox__colorDemonstration_color_" + item.color)
             .colorBox__Discription
               h2 !{item.colorName}
               h2 !{item.colorCode}
@@ -29,7 +30,8 @@ html(lang="en")
         h3 This is a label or CTA text
         p This is the body text which is used for most of the design, like paragraphs, lists, etc.
     .formElements
-      +textField('Email', 'text', 'Text Field')
+      +textField("Email", "Text Field")
+      +dropdownField("guests", "Dropdown")
     .cards
     .headers
     .footers

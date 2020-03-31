@@ -1,18 +1,15 @@
 @import '../сolorVariables/сolorVariables';
 @import '../fontMixins/fontMixins.scss';
 
-.textField {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+.label {
+  @include h3;
 }
 
-.textField__label {
-  @include h3;
+.formField__label {
   padding-bottom: 5px;
 }
 
-.textField__input  {
+.formField__field  {
   box-sizing: border-box;
   border: 1px solid $color1Opacity25;
   border-radius: 4px;
@@ -21,9 +18,11 @@
   outline: none;
   @include baseText;
   line-height: 18px;
-  color: $color1Opacity25;
+  color: $color1Opacity75;
+  &::placeholder {
+    color: $color1Opacity25;
+  }
   &:hover, &:focus {
     border-color: $color1Opacity50;
-    color: $color1Opacity75;
   }
 }

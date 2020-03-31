@@ -1,26 +1,6 @@
 @import '../сolorVariables/сolorVariables';
 @import '../fontMixins/fontMixins.scss';
 
-
-// @font-face {
-//   font-family: Quicksand;
-//   src: url("./Quicksand/Quicksand-VariableFont_wght.ttf");
-// }
-// @font-face {
-//   font-family: Quicksand;
-//   src: url("./Quicksand/static/Quicksand-Bold.ttf");
-//   font-weight: bold;
-// }
-// @font-face {
-//   font-family: Montserrat;
-//   src: url("./Montserrat/Montserrat-Regular.ttf");
-// }
-// @font-face {
-//   font-family: Montserrat;
-//   src: url("./Montserrat/Montserrat-Bold.ttf");
-//   font-weight: bold;
-// }
-
 * {
   padding: 0;
   margin: 0;
@@ -44,4 +24,14 @@ h2 {
 h3 {
   @include h3;
   color: $color1;
+}
+
+.spaceBetweenContener {
+  display: flex;
+  justify-content: space-between;
+}
+.colomnsContener{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
