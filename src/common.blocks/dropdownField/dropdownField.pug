@@ -1,0 +1,24 @@
+//- include ../../common.blocks/button/button.pug
+//- .dropdown.formField__field.colomnsContener
+mixin dropdownField(id, label)
+  .formField.colomnsContener
+    label(for=id).formField__label.label !{label}
+    .formField__field.spaceBetweenContener.formField__field_version_dropdown
+      p(id=id) Сколько гостей
+      div.arrow.formField__arrow
+    .dropdown.formField__field
+      .spaceBetweenContener
+        .colomnsContener
+          p.colomnsContener__label.label Взрослые
+          p.colomnsContener__label.label Дети
+          p.colomnsContener__label.label Младенцы
+        .colomnsContener
+          -var className = id + "Quantity"
+          - for (var x = 0; x < 3; x++)
+            .numberPicker.colomnsContener__numberPicker
+              button.numberPicker__minusBtn -
+              div.numberPicker__number.label(class=className) 0
+              button.numberPicker__plusBtn +
+      .dropdown__btnBox.spaceBetweenContener
+        +button("Очистить", "theme_textOnly", "color_color1Opacity50")
+        +button("Применить", "theme_textOnly", "color_color2")

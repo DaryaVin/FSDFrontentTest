@@ -5,6 +5,7 @@ html(lang="en")
     include ../../common.blocks/logo/logo.pug
     include ../../common.blocks/textField/textField.pug
     include ../../common.blocks/dropdownField/dropdownField.pug
+    include ../../common.blocks/button/button.pug
     .colorAndType
       .PresentationBlock__color
         -
@@ -30,8 +31,20 @@ html(lang="en")
         h3 This is a label or CTA text
         p This is the body text which is used for most of the design, like paragraphs, lists, etc.
     .formElements
-      +textField("Email", "Text Field")
-      +dropdownField("guests", "Dropdown")
+      .PresentationBlock__formField
+        +textField("Email", "Text Field")
+        +dropdownField("guests", "Dropdown")
+      .PresentationBlock__button
+        +button("click me", "theme_textOnly", "color_color2")
+        +button("click me", "theme_textOnly", "color_color1Opacity50") 
+        br
+        +button("click me", "theme_withBorder")
+        +button("click me", "theme_withBorder")(disabled)
+        br
+        +button("click me", "theme_fillBcg")
+        +button("click me", "theme_fillBcg")(disabled)
+        br
+        +button("перейти к оплате", "theme_fillBcg", "size_l")
     .cards
     .headers
     .footers

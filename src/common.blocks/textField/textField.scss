@@ -4,6 +4,9 @@
 .label {
   @include h3;
 }
+.formField {
+  display: inline-block;
+}
 
 .formField__label {
   padding-bottom: 5px;

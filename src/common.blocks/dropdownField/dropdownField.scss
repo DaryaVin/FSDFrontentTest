@@ -1,0 +1,67 @@
+@import '../textField/textField.scss';
+
+.formField__field_version_dropdown {
+  border-radius: 4px  4px 0 0;
+  border-color: $color1Opacity50;
+}
+
+.dropdown {
+  border-radius: 0 0 4px 4px;
+  border-top-width: 0;
+  padding: 7px 7px 13px 15px;
+  border-color: $color1Opacity50;
+  box-shadow: 0px 10px 20px $color1Opacity05;
+  display: none;
+}
+
+.colomnsContener__label {
+  height: 15px;
+  margin-bottom: 17px;
+  margin-top: 5px;
+}
+.arrow {
+  width: 7px;
+  height: 7px;
+  border-bottom: 1px solid $color1Opacity50;
+  border-left: 1px solid $color1Opacity50;
+  transform-origin: 50% 50%; 
+  transform: rotate(-45deg);
+}
+.formField__arrow {
+  margin-top: 2px;
+  margin-right: 3px;
+
+}
+
+.numberPicker {
+  display: flex;
+  width: 92px;
+}
+.numberPicker__minusBtn, .numberPicker__plusBtn {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid $color1Opacity25;
+  color: $color1Opacity50;
+  border-radius: 50%;
+  outline: none;
+  &:active {
+    width: 26px;
+    height: 26px;
+    margin: 2px;
+  }
+}
+.numberPicker__number {
+  margin: 6px 0px 9px 0px;
+  height: 15px;
+  width: 32px;
+  text-align: center;
+}
+.colomnsContener__numberPicker {
+  margin-bottom: 7px;
+}
+
+.dropdown__btnBox {
+  margin-top: 13px;
+}

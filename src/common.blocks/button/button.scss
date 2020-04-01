@@ -1,0 +1,90 @@
+@import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins.scss';
+
+.button {
+  @include h3;
+  outline: none;
+  position: relative;
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+.button_theme_textOnly {
+  background: none;
+  border: none;
+}
+.button_color_color1Opacity50 {
+  color: $color1Opacity50;
+}
+.button_color_color2 {
+  color: $color2;
+}
+.button_theme_withBorder {
+  $border: 2px;
+  box-sizing: border-box;
+  padding: 12px 18px 13px 18px;
+  color: $color2;
+  border: $border solid transparent;
+  border-radius: 22px;
+  background: $colorBcg;
+  background-clip: padding-box;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    @include linearGradient(background, $color2, $color2Gradiend);
+  }
+  &:disabled {
+    opacity: 1;
+    &::before {
+      opacity: 0.5;
+    }
+  }
+}
+.button_theme_fillBcg {
+  @include linearGradient(background, $color2, $color2Gradiend);
+  border-radius: 22px;
+  color: $colorBcg;
+  border: none;
+  padding: 14px 20px 15px 20px;
+}
+.button_size_l {
+  width: 320px;
+  padding-right: 35px;
+  .button__arrowForward {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// .button_size_big {
+//   width: 320px;
+//   padding-right: 35px;
+//   &::before {
+//     content: "";
+//     width: 14px;
+//     border-bottom: 1.8px solid $colorBcg;
+//     position: absolute;
+//     right: 16px;
+//     top: 20.9px;
+//   }
+//   &::after {
+//     content: "";
+//     width: 10px;
+//     height: 10px;
+//     border-right: 2px solid $colorBcg;
+//     border-bottom: 2px solid $colorBcg;
+//     transform: rotate(-45deg);
+//     position: absolute;
+//     right: 16px;
+//     top: 15.9px;
+//   }
+// }
+

@@ -1,8 +1,5 @@
 @import '../../common.blocks/сolorVariables/сolorVariables';
 
-.UIKitColorType__logo {
-  margin: 30px;
-}
 body > * {
   margin: 40px 20px 0;
 }
@@ -91,7 +88,19 @@ body > * {
     margin-left: 20px;
   }
 }
-.formElements > * {
-  margin: 10px;
+.formElements {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  & > * {
+    margin: 10px;
+  }
+}
+.PresentationBlock__button {
+  width: 340px;
+  & > * {
+    margin: 10px;
+  }
 }
 
