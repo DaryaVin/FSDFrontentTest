@@ -10,9 +10,12 @@
 .checkboxButtonBox {
   margin-bottom: 6px;
   align-items: top;
-  & > * {
+  & * {
     cursor: pointer;
   }
+}
+.checkboxButtonBox_theme_rich{
+  margin-bottom: 10px;
 }
 
 .checkboxButtonBox__field {
@@ -22,9 +25,6 @@
     & .checkboxButton__checkmarkInnerPoint {
       display: inline-block;
     }
-  }
-  & > * {
-    cursor: pointer;
   }
 }
 
@@ -69,7 +69,18 @@
 }
 
 .checkboxButtonBox__label {
-  width: 192px;
+  width: 230px;
   padding-left: 10px;
   text-align: left;
+}
+.checkboxButtonBox__label_theme_rich {
+  font-weight: bold;
+  color: $color1Opacity75;
+}
+.checkboxButtonBox__explanation {
+  color: $color1Opacity50;
+  font-size: 12px;
+  line-height: 14px;
+  padding-top: 5px;
+  font-weight: normal;
 }

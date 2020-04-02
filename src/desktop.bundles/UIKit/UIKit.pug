@@ -62,7 +62,21 @@ html(lang="en")
           {value:'canPet', label:'Можно с питомцами'},
           {value:'canGuest', label:'Можно пригласить гостей (до 10 человек)'}
         ];
-      +checkboxButtons("accommodations", accommodationsItems)
+      +checkboxButtons("","accommodations", accommodationsItems)
+      -
+        var conditionsForDisabledItems = [
+          {
+            value:'canGuest', 
+            label:'Широкий коридор', 
+            explanation: 'Ширина коридоров в номере не менее 91 см.'
+          },
+          {
+            value:'canPet', 
+            label:'Помощник для инвалидов', 
+            explanation: 'На 1 этаже вас встретит специалист и проводит до номера.'
+          }
+        ];
+      +checkboxButtons("rich","conditionsForDisabled", conditionsForDisabledItems)
     .cards
     .headers
     .footers
