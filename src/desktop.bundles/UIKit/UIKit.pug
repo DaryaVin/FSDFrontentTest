@@ -8,6 +8,7 @@ html(lang="en")
     include ../../common.blocks/button/button.pug
     include ../../common.blocks/radioButton/radioButton.pug
     include ../../common.blocks/checkboxButton/checkboxButton.pug
+    include ../../common.blocks/bulletList/bulletList.pug
     
     .colorAndType
       .PresentationBlock__color
@@ -56,27 +57,35 @@ html(lang="en")
           ];
         +radioButtons("sex", sexItems)
       .PrePresentationBlock__checkboxButton
-      -
-        var accommodationsItems = [
-          {value:'canSmoke', label:'Можно курить'},
-          {value:'canPet', label:'Можно с питомцами'},
-          {value:'canGuest', label:'Можно пригласить гостей (до 10 человек)'}
-        ];
-      +checkboxButtons("","accommodations", accommodationsItems)
-      -
-        var conditionsForDisabledItems = [
-          {
-            value:'canGuest', 
-            label:'Широкий коридор', 
-            explanation: 'Ширина коридоров в номере не менее 91 см.'
-          },
-          {
-            value:'canPet', 
-            label:'Помощник для инвалидов', 
-            explanation: 'На 1 этаже вас встретит специалист и проводит до номера.'
-          }
-        ];
-      +checkboxButtons("rich","conditionsForDisabled", conditionsForDisabledItems)
+        -
+          var accommodationsItems = [
+            {value:'canSmoke', label:'Можно курить'},
+            {value:'canPet', label:'Можно с питомцами'},
+            {value:'canGuest', label:'Можно пригласить гостей (до 10 человек)'}
+          ];
+        +checkboxButtons("","accommodations", accommodationsItems)
+        -
+          var conditionsForDisabledItems = [
+            {
+              value:'canGuest', 
+              label:'Широкий коридор', 
+              explanation: 'Ширина коридоров в номере не менее 91 см.'
+            },
+            {
+              value:'canPet', 
+              label:'Помощник для инвалидов', 
+              explanation: 'На 1 этаже вас встретит специалист и проводит до номера.'
+            }
+          ];
+        +checkboxButtons("rich","conditionsForDisabled", conditionsForDisabledItems)
+      .PrePresentationBlock__bulletList
+        -
+          var bulletListItems = [
+            'Нельзя с питомцами',
+            'Без вечеринок и мероприятий',
+            'Время прибытия — после 13:00, а выезд до 12:00',
+          ];
+        +bulletList("bulletList", bulletListItems)
     .cards
     .headers
     .footers
