@@ -5,6 +5,6 @@ mixin radioButtons(name, items)
       .radioButtonBox.spaceBetweenContener
         .radioButtonBox__field
           input(type="radio", name=name, id=id).radioButton
-          .checkmark.radioButton__checkmark
-            div.checkmark__innerPoint
+          .radioButton__checkmark
+            div.radioButton__checkmarkInnerPoint
         label(for=id).radioButtonBox__label !{item.label}

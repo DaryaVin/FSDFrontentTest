@@ -1,0 +1,10 @@
+mixin checkboxButtons(name, items)
+  .checkboxButtonsGroup.colomnContener
+    each item in items
+      -var value = name+"__"+item.value
+      .checkboxButtonBox.spaceBetweenContener
+        .checkboxButtonBox__field
+          input(type="checkbox", name=name, value=value).checkboxButton
+          .checkboxButton__checkmark
+            div.checkboxButton__checkmarkInnerPoint
+        label(for=id).checkboxButtonBox__label !{item.label}

@@ -7,6 +7,8 @@ html(lang="en")
     include ../../common.blocks/dropdownField/dropdownField.pug
     include ../../common.blocks/button/button.pug
     include ../../common.blocks/radioButton/radioButton.pug
+    include ../../common.blocks/checkboxButton/checkboxButton.pug
+    
     .colorAndType
       .PresentationBlock__color
         -
@@ -53,6 +55,14 @@ html(lang="en")
             {id:'girl', label:'Женщина'}
           ];
         +radioButtons("sex", sexItems)
+      .PrePresentationBlock__checkboxButton
+      -
+        var accommodationsItems = [
+          {value:'canSmoke', label:'Можно курить'},
+          {value:'canPet', label:'Можно с питомцами'},
+          {value:'canGuest', label:'Можно пригласить гостей (до 10 человек)'}
+        ];
+      +checkboxButtons("accommodations", accommodationsItems)
     .cards
     .headers
     .footers

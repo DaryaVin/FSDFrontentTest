@@ -14,9 +14,9 @@
 }
 .radioButtonBox__field {
   position: relative;
-  & .radioButton:checked ~ .checkmark {
+  & .radioButton:checked ~ .radioButton__checkmark {
     border-color: $color2;
-    & .checkmark__innerPoint {
+    & .radioButton__checkmarkInnerPoint {
       display: inline-block;
     }
   }
@@ -37,15 +37,13 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-}
-.checkmark {
-  height: 19px;
-  width: 19px;
+  height: 18px;
+  width: 18px;
   z-index: -1;
   border: 1px solid $color1Opacity25;
   border-radius: 50%;
 }
-.checkmark__innerPoint {
+.radioButton__checkmarkInnerPoint {
   display: none;
   height: 12px;
   width: 12px;
@@ -58,5 +56,5 @@
 }
 
 .radioButtonBox__label{
-  padding-left: 20px;
+  padding-left: 10px;
 }
