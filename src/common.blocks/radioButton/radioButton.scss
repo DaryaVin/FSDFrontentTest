@@ -1,0 +1,62 @@
+@import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins.scss';
+
+.radioButtonsGroup {
+  @include baseText;
+  color: $color1Opacity50;
+}
+.radioButtonBox {
+  margin-right: 20px;
+  align-items: center;
+  & > * {
+    cursor: pointer;
+  }
+}
+.radioButtonBox__field {
+  position: relative;
+  & .radioButton:checked ~ .checkmark {
+    border-color: $color2;
+    & .checkmark__innerPoint {
+      display: inline-block;
+    }
+  }
+  & > * {
+    cursor: pointer;
+  }
+}
+.radioButton {
+  outline: none;  
+  width: 20px;
+  height: 20px;
+  // align-items: center;
+  opacity: 0;
+}
+
+.radioButton__checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.checkmark {
+  height: 19px;
+  width: 19px;
+  z-index: -1;
+  border: 1px solid $color1Opacity25;
+  border-radius: 50%;
+}
+.checkmark__innerPoint {
+  display: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  @include linearGradient(background, $color2, $color2Gradiend);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radioButtonBox__label{
+  padding-left: 20px;
+}

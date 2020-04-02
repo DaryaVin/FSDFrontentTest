@@ -6,6 +6,7 @@ html(lang="en")
     include ../../common.blocks/textField/textField.pug
     include ../../common.blocks/dropdownField/dropdownField.pug
     include ../../common.blocks/button/button.pug
+    include ../../common.blocks/radioButton/radioButton.pug
     .colorAndType
       .PresentationBlock__color
         -
@@ -45,6 +46,13 @@ html(lang="en")
         +button("click me", "theme_fillBcg")(disabled)
         br
         +button("перейти к оплате", "theme_fillBcg", "size_l")
+      .PrePresentationBlock__radioButton
+        -
+          var sexItems = [
+            {id:'boy', label:'Мужчина'},
+            {id:'girl', label:'Женщина'}
+          ];
+        +radioButtons("sex", sexItems)
     .cards
     .headers
     .footers

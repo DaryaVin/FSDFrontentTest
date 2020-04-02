@@ -5,6 +5,7 @@
   @include h3;
   outline: none;
   position: relative;
+  cursor: pointer;
   &:disabled {
     opacity: 0.5;
   }

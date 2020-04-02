@@ -1,0 +1,10 @@
+mixin radioButtons(name, items)
+  .radioButtonsGroup.spaceBetweenContener
+    each item in items
+      -var id = name+"__"+item.id
+      .radioButtonBox.spaceBetweenContener
+        .radioButtonBox__field
+          input(type="radio", name=name, id=id).radioButton
+          .checkmark.radioButton__checkmark
+            div.checkmark__innerPoint
+        label(for=id).radioButtonBox__label !{item.label}
