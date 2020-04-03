@@ -6,6 +6,7 @@ html(lang="en")
     include ../../common.blocks/textField/textField.pug
     include ../../common.blocks/dropdownField/dropdownField.pug
     include ../../common.blocks/button/button.pug
+    include ../../common.blocks/likeButton/likeButton.pug
     include ../../common.blocks/radioButton/radioButton.pug
     include ../../common.blocks/checkboxButton/checkboxButton.pug
     include ../../common.blocks/bulletList/bulletList.pug
@@ -47,6 +48,9 @@ html(lang="en")
         br
         +button("click me", "theme_fillBcg")
         +button("click me", "theme_fillBcg")(disabled)
+        br
+        +likeButton(false)
+        +likeButton(true)
         br
         +button("перейти к оплате", "theme_fillBcg", "size_l")
       .PrePresentationBlock__radioButton
