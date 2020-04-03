@@ -4,6 +4,7 @@
 .button {
   @include h3;
   outline: none;
+  background: none;
   position: relative;
   cursor: pointer;
   &:disabled {
@@ -88,4 +89,93 @@
 //     top: 15.9px;
 //   }
 // }
+.button_theme_like {
+  $border: 1px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;  
+  box-sizing: border-box;
+  padding: 2px 9px 3px 19px;
+  color: $color2;
+  border: $border solid transparent;
+  border-radius: 10px;
+  background: $colorBcg;
+  background-clip: padding-box;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    @include linearGradient(background, $color2, $color2Gradiend);
+  }
+  &:disabled {
+    opacity: 1;
+    &::before {
+      opacity: 0.5;
+    }
+  }
+}
+.heart{
+  $heartSize: 5px;
+  display: inline-block;
+  position: absolute;
+  height: $heartSize;
+  width: $heartSize;
+  transform: rotate(-45deg);
+  @include linearGradient(background, $color2Gradiend, $color2Gradiend);
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: $heartSize;
+    width: $heartSize;
+    border-radius: 50%;
+    @include linearGradient(background, $color2, $color2Gradiend);
+  }
+  &::before {
+    top: -50%;
+    left: 0;
+  }
+  &::after {
+    top: 0;
+    left: 50%;
+  }
+  .heart__inside {
+    display: inline-block;
+    position: absolute;
+    height: $heartSize*0.7;
+    width: $heartSize*0.7;
+    background:$colorBcg;
+    // top:  $heartSize*0;
+    bottom: $heartSize*0.15;
+    left: $heartSize*0.15;
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      height: $heartSize*1.1;
+      width: $heartSize*0.7;
+      background: $colorBcg;
+      border-radius:  50%;
+    }
+    &::after {
+      top: -28%;
+      right: -42%;
+      transform: rotate(90deg);
+    }
+    &::before {
+      bottom: 15%;
+      left: 0%;
+    }
+  }
+}
 
+
+
+.button__heart {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+}
