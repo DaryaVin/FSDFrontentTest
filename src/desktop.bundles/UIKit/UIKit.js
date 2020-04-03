@@ -7,5 +7,6 @@ import '@common/baseStyle/baseStyle.scss';
 import '@common/radioButton/radioButton.scss';
 import '@common/checkboxButton/checkboxButton.scss';
 import '@common/bulletList/bulletList.scss';
+import '@common/toggle/toggle.scss';
 
 import './UIKit.scss';
