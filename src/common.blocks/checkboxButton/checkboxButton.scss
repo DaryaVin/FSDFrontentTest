@@ -10,7 +10,7 @@
 .checkboxButtonBox {
   margin-bottom: 6px;
   align-items: top;
-  & * {
+  * {
     cursor: pointer;
   }
 }
@@ -20,9 +20,9 @@
 
 .checkboxButtonBox__field {
   position: relative;
-  & .checkboxButton:checked ~ .checkboxButton__checkmark {
+  .checkboxButton:checked ~ .checkboxButton__checkmark {
     border-color: $color2;
-    & .checkboxButton__checkmarkInnerPoint {
+    .checkboxButton__checkmarkInnerPoint {
       display: inline-block;
     }
   }
@@ -40,8 +40,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 18px;
-  width: 18px;
+  height: 20px;
+  width: 20px;
   z-index: -1;
   border: 1px solid $color1Opacity25;
   border-radius: 4px;

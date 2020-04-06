@@ -11,6 +11,7 @@ html(lang="en")
     include ../../common.blocks/checkboxButton/checkboxButton.pug
     include ../../common.blocks/bulletList/bulletList.pug
     include ../../common.blocks/toggle/toggle.pug
+    include ../../common.blocks/rateButton/rateButton.pug
     
     .colorAndType
       .PresentationBlock__color
@@ -93,6 +94,8 @@ html(lang="en")
         +bulletList("bulletList", bulletListItems)
       .PrePresentationBlock__toggle
         +toggle("specialOffers", "Получать спецпредложения")
+        +rateButton("rateButton")
+        +logo("colorVersion", "")
     .cards
     .headers
     .footers

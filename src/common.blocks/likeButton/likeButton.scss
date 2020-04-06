@@ -35,12 +35,12 @@
   }
 }
 .heartLike {
-  & path {
+  path {
     fill: $color2;
   }
 }
 .heartNoLike {
-  & path {
+  path {
     fill: $color1Opacity25; 
   }
 }

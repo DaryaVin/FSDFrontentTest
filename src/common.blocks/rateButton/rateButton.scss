@@ -1,0 +1,46 @@
+@import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins.scss';
+
+.rateButton {
+  width: 120px;
+  overflow: hidden;
+  flex-direction: row-reverse;
+  height: 24px;
+  position: relative;
+}
+
+.rateButton__field {
+  display: none;
+  &:checked ~ .rateButton__label  path {
+    &.star_checked {
+      display: inline;
+    }
+    &.star_notChecked {
+      display: none;
+    }
+  }
+  // &:not(:checked) ~ .rateButton__label:hover {
+  //   path,
+  //   ~ .rateButton__label path {
+  //     fill: $color1Opacity50;
+  //   }
+  // } 
+}
+.star {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: 1s;
+  path {
+    fill: url(#color2LinearGradient);
+    transition: display 450ms ease;
+    &.star_checked {
+      display: none;
+    }
+    &.star_notChecked {
+      display: inline;
+    }
+  }
+}
+
+

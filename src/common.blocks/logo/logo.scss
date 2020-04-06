@@ -1,26 +1,26 @@
 @import '../сolorVariables/сolorVariables';
 
-linearGradient#color2LinearGradient {
-  stop:first-child {
-    offset: 0%;
-    stop-color: $color2;
-  }
-  stop:last-child {
-    offset: 100%;
-    stop-color: $color2Gradiend;
-  }
-}
+// linearGradient#color2LinearGradient {
+//   stop:first-child {
+//     offset: 0%;
+//     stop-color: $color2;
+//   }
+//   stop:last-child {
+//     offset: 100%;
+//     stop-color: $color2Gradiend;
+//   }
+// }
 
-linearGradient#color3LinearGradient {
-  stop:first-child {
-    offset: 0%;
-    stop-color: $color3;
-  }
-  stop:last-child {
-    offset: 100%;
-    stop-color: $color3Gradiend;
-  }
-}
+// linearGradient#color3LinearGradient {
+//   stop:first-child {
+//     offset: 0%;
+//     stop-color: $color3;
+//   }
+//   stop:last-child {
+//     offset: 100%;
+//     stop-color: $color3Gradiend;
+//   }
+// }
 
 .logo {
   display: flex;

@@ -12,3 +12,20 @@ $colorBcg: #FFFFFF;
 @mixin linearGradient($property, $color1, $color2) {
   #{$property}: linear-gradient(180deg, $color1 0%, $color2 100%);  
 }
+
+@mixin linearGradientForSVG($color1, $color2, $offset1, $offset2) {
+    stop:first-child {
+      offset: $offset1;
+      stop-color: $color1;
+    }
+    stop:last-child {
+      offset: $offset2;
+      stop-color: $color2;
+  }
+}
+linearGradient#color2LinearGradient {
+  @include linearGradientForSVG($color2, $color2Gradiend, 0%, 100%);
+}
+linearGradient#color3LinearGradient {
+  @include linearGradientForSVG($color3, $color3Gradiend, 0%, 100%);
+}

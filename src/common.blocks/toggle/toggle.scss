@@ -6,14 +6,14 @@
   color: $color1Opacity75;
   margin-bottom: 6px;
   align-items: center;
-  & * {
+  * {
     cursor: pointer;
   }
 }
 .toggleButtonBox__field {
   position: relative;
   height: 20px;
-  & .toggleButton:checked ~ .toggleButton__checkmark {
+  .toggleButton:checked ~ .toggleButton__checkmark {
     border-color: $color2;
     &::before {
       transform: translateX(20px);
@@ -33,12 +33,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 18px;
-  width: 38px;
+  height: 20px;
+  width: 40px;
   z-index: -1;
   border: 1px solid $color1Opacity25;
   border-radius: 10px;
-  transition: 1s;
+  transition: background 450ms ease;
+  // transition: 1s;
   &::before {
     content: "";
     position: absolute;
@@ -49,7 +50,10 @@
     height: 12px;
     outline: none;
     @include linearGradient(background, $color1Opacity25, $color1Opacity25);
-    transition: 1s;
+    transition:
+      background 450ms ease,
+      transform 450ms ease;
+    // transition: 1s;
   }
 }
 

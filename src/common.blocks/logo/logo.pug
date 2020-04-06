@@ -1,13 +1,10 @@
+include ../сolorVariables/сolorVariables.pug
 mixin logo(colorVersion, classPosition)
   .logo(class=(colorVersion ? "logo_colorVersion" : ""))(class=(classPosition ? classPosition : ""))
     .logo__emblem
       svg(width="48", height="48", viewBox="0 0 48 48", fill="none", xmlns="http://www.w3.org/2000/svg")
-        linearGradient#color2LinearGradient(x1="50%", y1="0%", x2="50%", y2="100%")
-          stop(offset="0%", stop-color="grey")
-          stop(offset="100%", stop-color="grey")
-        linearGradient#color3LinearGradient(x1="50%", y1="0%", x2="50%", y2="100%")
-          stop(offset="0%", stop-color="grey")
-          stop(offset="100%", stop-color="grey")
+        +linearGradientForSVG("color2")
+        +linearGradientForSVG("color3")
         path(d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z")
       .logo__emblem_side_left
         svg(width="15", height="15", viewBox="0 0 15 15", fill="none", xmlns="http://www.w3.org/2000/svg")
