@@ -1,0 +1,58 @@
+@import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins.scss';
+
+.rangeSlider {
+  width: 266px;
+}
+.rangeSlider__label {
+  width: 100%;
+  @include h3;
+  color: $color1;
+  margin-bottom: 23px;
+  align-items: flex-end;
+}
+.rangeSlider__amount {
+  @include h3;
+  font-weight: normal;
+  color: $color1Opacity50;
+  border: none;
+  outline: none;
+  width: 120px;
+  text-align: right;
+}
+
+.rangeSlider__slider.ui-slider {
+    $height: 6px;
+    $border: 1px;
+    background: $colorBcg;
+    border: $border solid $color1Opacity25;
+    border-radius: $height/2;
+    height: $height;
+    width: 100%;
+    .ui-slider-handle {
+      display: none;
+    }
+    .ui-slider-range {
+      @include linearGradient(background, $color3, $color3Gradiend);
+      height: $height;
+      margin-top: -$border;
+      position: relative;
+      &::before, &::after {
+        content: "";
+        @include linearGradient(background, $color3, $color3Gradiend);
+        border: 2*$border solid $colorBcg;
+        border-radius: 50%;
+        height: ($height+2*$border)*2;
+        width: ($height+2*$border)*2;
+        position: absolute;
+        top: 50%;
+        margin-top: -($height+2*$border);
+      }
+      &::before{
+        left: -14px;
+      }
+      &::after {
+        right: -14px;
+      }
+    }
+}
