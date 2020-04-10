@@ -13,6 +13,8 @@ html(lang="en")
     include ../../common.blocks/toggle/toggle.pug
     include ../../common.blocks/rateButton/rateButton.pug
     include ../../common.blocks/rangeSlider/rangeSlider.pug
+    include ../../common.blocks/pagination/pagination.pug
+    
     
     .colorAndType
       .PresentationBlock__color
@@ -98,6 +100,7 @@ html(lang="en")
         +rateButton("rateButton")
         +logo("colorVersion", "")
         +rangeSlider("Range Slider")
+      +pagination()
     .cards
     .headers
     .footers

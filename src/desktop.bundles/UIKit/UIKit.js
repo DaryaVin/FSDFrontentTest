@@ -11,5 +11,6 @@ import '@common/toggle/toggle.scss';
 import '@common/rateButton/rateButton.scss';
 import '@common/rangeSlider/rangeSlider.js';
 import '@common/rangeSlider/rangeSlider.scss';
+import '@common/pagination/pagination.js';
 
 import './UIKit.scss';

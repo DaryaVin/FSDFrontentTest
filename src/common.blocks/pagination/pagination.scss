@@ -1,0 +1,78 @@
+@import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins';
+
+.pagination {
+  width: 100%;
+  @include baseText;
+  color: $color1Opacity50;
+  align-items: center;
+}
+.pagination__dataContainer {
+    flex-wrap: wrap;
+    li {
+      list-style: none;
+      display: inline-block;
+      width: 33%;
+      min-width: 70px;
+      min-height: 50px;
+      max-width: 200px;
+      border: 1px solid $color1Opacity50;
+    }
+}
+
+.pagination__paging {
+  margin-top: 20px;
+  .paginationjs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .paginationjs-pages {
+    text-align: center;
+    margin-bottom: 10px;
+    ul > * {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      a {
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 15px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+  .paginationjs-page {
+    &.active {
+      border-radius: 50%;
+      @include linearGradient("background", $color2, $color2Gradiend);
+      a {
+        color: $colorBcg;
+      }
+    }
+  }
+  .paginationjs-next {
+    border-radius: 50%;
+    @include linearGradient("background", $color3, $color3Gradiend);
+    &.disabled {
+      margin-left: 5px;
+      @include linearGradient("background", $color1Opacity25, $color1Opacity05);
+    }
+    a {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+  .paginationjs-nav {
+    
+  }
+}

@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const fs = require('fs');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
@@ -76,6 +77,12 @@ module.exports = {
         collapseWhitespace: isProd
       }
     }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      "window.$": "jquery"
+  }),
     new CleanWebpackPlugin(),
     // new CopyWebpackPlugin([
     //   {
