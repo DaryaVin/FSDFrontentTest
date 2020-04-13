@@ -4,8 +4,10 @@
   border-radius: 4px  4px 0 0;
   border-color: $color1Opacity50;
 }
-
-.dropdown {
+.dropdown__dropdownButton {
+  background: transparent;
+}
+.dropdown__dropdownContener {
   border-radius: 0 0 4px 4px;
   border-top-width: 0;
   padding: 7px 7px 13px 15px;
@@ -14,7 +16,7 @@
   display: none;
 }
 
-.colomnsContener__label {
+.dropdown__label {
   height: 15px;
   margin-bottom: 17px;
   margin-top: 5px;
@@ -58,7 +60,7 @@
   width: 32px;
   text-align: center;
 }
-.colomnsContener__numberPicker {
+.dropdown__numberPicker {
   margin-bottom: 7px;
 }
 

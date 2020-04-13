@@ -11,7 +11,8 @@
 
 .rateButton__field {
   display: none;
-  &:checked ~ .rateButton__label  path {
+  &:checked ~ .rateButton__label  path,
+  &.checked ~ .rateButton__label  path{
     &.star_checked {
       display: inline;
     }

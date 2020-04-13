@@ -13,6 +13,10 @@
 .button_theme_textOnly {
   background: none;
   border: none;
+  &:active {
+    color: $color1Opacity25;
+    box-shadow: 0px 10px 20px $color1Opacity05;
+}
 }
 .button_color_color1Opacity50 {
   color: $color1Opacity50;
@@ -44,6 +48,12 @@
       opacity: 0.5;
     }
   }
+  &:active {
+    &::before {
+      @include linearGradient(background, $color2Gradiend, $color2);
+      box-shadow: 0px 10px 20px $color1Opacity05;
+    }
+  }
 }
 .button_theme_fillBcg {
   @include linearGradient(background, $color2, $color2Gradiend);
@@ -51,6 +61,10 @@
   color: $colorBcg;
   border: none;
   padding: 14px 20px 15px 20px;
+  &:active {
+      @include linearGradient(background, $color2Gradiend, $color2);
+      box-shadow: 0px 10px 20px $color1Opacity05;
+  }
 }
 .button_size_l {
   width: 320px;
