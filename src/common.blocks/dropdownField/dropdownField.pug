@@ -4,14 +4,15 @@ mixin dropdownField(id, label)
   
   .formField.colomnsContener
     label(for=id).formField__label.label !{label}
-    - var onClickFunction = "dropdownButtonOnClick(\"" + id + "\")"
+    - var onClickFunction = "dropdownButton_OnClick(\"" + id + "\")"
     .dropdown
       button.dropdown__dropdownButton.formField__field.spaceBetweenContener(onclick=onClickFunction)(id="dropdown__dropdownButton" + id)
         p Сколько гостей
         div.arrow.formField__arrow
-      ul.dropdown__dropdownContener.formField__field(id="dropdown__dropdownContener" + id)
-        -var labelStr = ["Взрослые", "Дети", "Младенцы"]
-        - for (var i = 0; i < labelStr.length; i++)
+      .dropdown__dropdownContener.formField__field(id="dropdown__dropdownContener" + id)
+        ul.colomnsContener
+          -var labelStr = ["Взрослые", "Дети", "Младенцы"]
+          - for (var i = 0; i < labelStr.length; i++)
             li.dropdown__item.spaceBetweenContener
               p.dropdown__label.label !{labelStr[i]}
               .numberPicker.dropdown__numberPicker

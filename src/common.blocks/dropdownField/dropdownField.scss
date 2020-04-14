@@ -1,8 +1,13 @@
+@import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins.scss';
 @import '../textField/textField.scss';
 
 .formField__field_version_dropdown {
   border-radius: 4px  4px 0 0;
   border-color: $color1Opacity50;
+}
+.dropdown {
+  position: relative;
 }
 .dropdown__dropdownButton {
   background: transparent;
@@ -12,8 +17,15 @@
   border-top-width: 0;
   padding: 7px 7px 13px 15px;
   border-color: $color1Opacity50;
+  background: $colorBcg;
+  z-index: 1;
   box-shadow: 0px 10px 20px $color1Opacity05;
   display: none;
+}
+.show {
+  display: block;
+  position: absolute;
+  top: 100%;
 }
 
 .dropdown__label {
@@ -49,9 +61,7 @@
   border-radius: 50%;
   outline: none;
   &:active {
-    width: 26px;
-    height: 26px;
-    margin: 2px;
+    transform: scale(0.95, 0.95);
   }
 }
 .numberPicker__number {

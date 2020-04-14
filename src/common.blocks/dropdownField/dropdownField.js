@@ -5,8 +5,8 @@ window.onclick = function(event) {
     var dropdownButtons = $(".dropdown__dropdownButton");
     for (var i = 0; i < dropdownConteners.length; i++) {
       var openDropdown = dropdownConteners[i];
-      if (openDropdown.classList.contains('colomnsContener')) {
-        openDropdown.classList.remove('colomnsContener');
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
       }
     }
     for (var i = 0; i < dropdownButtons.length; i++) {

@@ -3,28 +3,18 @@
 
 .likeButton {
   $border: 1px;
-  @include h3;
-  outline: none;
-  position: relative;
-  cursor: pointer;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
   line-height: 12px;  
   box-sizing: border-box;
-  padding: 2px 9px 3px 19px;
+  padding: 2px 9px 4px 19px;
   color: $color1Opacity25;
   border: $border solid transparent;
   border-radius: 10px;
-  background: $colorBcg;
   background-clip: padding-box;
   &::before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -1;
     margin: -$border;
-    border-radius: inherit;
     background: $color1Opacity25;
   }
   &.likeButton_like {
@@ -46,6 +36,6 @@
 }
 .likeButton__heart {
   position: absolute;
-  top: 4px;
+  top: 5px;
   left: 4px;
 }
