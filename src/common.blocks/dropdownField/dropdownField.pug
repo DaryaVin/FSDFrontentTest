@@ -1,7 +1,6 @@
 //- include ../../common.blocks/button/button.pug
 //- .dropdown.formField__field.colomnsContener
 mixin dropdownField(id, label)
-  
   .formField.colomnsContener
     label(for=id).formField__label.label !{label}
     - var onClickFunction = "dropdownButton_OnClick(\"" + id + "\")"
@@ -15,10 +14,7 @@ mixin dropdownField(id, label)
           - for (var i = 0; i < labelStr.length; i++)
             li.dropdown__item.spaceBetweenContener
               p.dropdown__label.label !{labelStr[i]}
-              .numberPicker.dropdown__numberPicker
-                  button.numberPicker__minusBtn -
-                  div.numberPicker__number.label 0
-                  button.numberPicker__plusBtn +
+              +numberPicker("1", 0, 10, 0)
         .dropdown__btnBox.spaceBetweenContener
           +button("Очистить", "theme_textOnly", "color_color1Opacity50")
           +button("Применить", "theme_textOnly", "color_color2")

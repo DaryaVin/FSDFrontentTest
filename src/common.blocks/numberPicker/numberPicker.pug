@@ -1,0 +1,5 @@
+mixin numberPicker(id, min, max, val)
+  .numberPicker()&attributes(attributes)
+    button.numberPicker__minusBtn -
+    input(type="number", max=max, min=min, value=val, id=id).numberPicker__number.label
+    button.numberPicker__plusBtn +
