@@ -4,7 +4,7 @@ mixin checkboxButtons(theme, name, items)
     - if (theme == "rich") theme_rich = true
     each item in items
       - var id = name+"__"+item.value
-      .checkboxButtonBox.spaceBetweenContener(class=theme_rich?"checkboxButtonBox_theme_rich": "")
+      .checkboxButtonBox(class=theme_rich?"checkboxButtonBox_theme_rich": "")
         .checkboxButtonBox__field
           input(type="checkbox", name=name, id=id, value=item.value).checkboxButton
           .checkboxButton__checkmark

@@ -10,6 +10,8 @@
 .checkboxButtonBox {
   margin-bottom: 6px;
   align-items: top;
+  display: flex;
+  justify-content: start;
   * {
     cursor: pointer;
   }

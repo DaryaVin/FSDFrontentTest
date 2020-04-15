@@ -1,18 +1,7 @@
 @import '../сolorVariables/сolorVariables';
 @import '../fontMixins/fontMixins.scss';
 
-.label {
-  @include h3;
-}
-.formField {
-  display: inline-block;
-}
-
-.formField__label {
-  padding-bottom: 5px;
-}
-
-.formField__field  {
+@mixin field {
   box-sizing: border-box;
   border: 1px solid $color1Opacity25;
   border-radius: 4px;
@@ -28,4 +17,19 @@
   &:hover, &:focus {
     border-color: $color1Opacity50;
   }
+}
+
+.label {
+  @include h3;
+}
+.formField {
+  display: inline-block;
+}
+
+.formField__label {
+  padding-bottom: 5px;
+}
+
+.formField__field  {
+  @include field;
 }

@@ -1,6 +1,7 @@
 import '@common/logo/logo.scss';
 import '@common/textField/textField.scss';
 import '@common/dropdownField/dropdownField.js';
+import '@common/dropdown/dropdown.js';
 import '@common/button/button.scss';
 import '@common/likeButton/likeButton.scss';
 import '@common/baseStyle/baseStyle.scss';
