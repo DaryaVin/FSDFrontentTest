@@ -1,0 +1,19 @@
+@import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins.scss';
+
+.numberPickerList__label {
+  height: 15px;
+  margin-bottom: 17px;
+  margin-top: 5px;
+}
+.numberPickerList__numberPicker {
+  margin-bottom: 7px;
+}
+.numberPickerList__buttonBox {
+  margin-top: 13px;
+  display: none;
+}
+.numberPickerList_theme_withButtonBox .numberPickerList__buttonBox{
+  display: flex;
+  justify-content: space-between;
+}

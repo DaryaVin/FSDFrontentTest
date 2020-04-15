@@ -13,5 +13,6 @@ import '@common/rangeSlider/rangeSlider.js';
 import '@common/rangeSlider/rangeSlider.scss';
 import '@common/pagination/pagination.js';
 import '@common/numberPicker/numberPicker.js';
+import '@common/numberPickerList/numberPickerList.scss';
 
 import './UIKit.scss';
