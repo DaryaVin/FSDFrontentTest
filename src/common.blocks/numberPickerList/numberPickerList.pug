@@ -1,10 +1,10 @@
 mixin numberPickerList(id, items)
   ul.numberPickerList.colomnsContener()&attributes(attributes)
     each item in items
-      - var itemId = item.value + id
+      - var itemId = "numberPicker__number" + item.value + id
       li.numberPickerList__item.spaceBetweenContener
         p.numberPickerList__label.label !{item.label}
-        +numberPicker(item.value, 0, 10, 0)
+        +numberPicker(itemId, 0, 10, 0)
     li.numberPickerList__buttonBox
-      +button("Очистить", "theme_textOnly", "color_color1Opacity50")
-      +button("Применить", "theme_textOnly", "color_color2")
+      +button("Применить", "theme_textOnly", "color_color2")(id = "numberPickerList__executeButton" + id).numberPickerList__executeButton
+      +button("Очистить", "theme_textOnly", "color_color1Opacity50")(id = "numberPickerList__resetButton" + id, hidden).numberPickerList__resetButton

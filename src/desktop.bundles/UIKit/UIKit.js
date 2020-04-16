@@ -15,5 +15,6 @@ import '@common/rangeSlider/rangeSlider.scss';
 import '@common/pagination/pagination.js';
 import '@common/numberPicker/numberPicker.js';
 import '@common/numberPickerList/numberPickerList.scss';
+import '@common/guestsField/guestsField.js';
 
 import './UIKit.scss';

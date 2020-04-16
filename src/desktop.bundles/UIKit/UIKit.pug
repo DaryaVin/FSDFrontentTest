@@ -17,9 +17,10 @@ html(lang="en")
     include ../../common.blocks/rangeSlider/rangeSlider.pug
     include ../../common.blocks/pagination/pagination.pug
     include ../../common.blocks/numberPicker/numberPicker.pug
-    
-    
-    
+    include ../../common.blocks/guestsField/guestsField.pug
+
+
+
     .colorAndType
       .PresentationBlock__color
         -
@@ -38,7 +39,7 @@ html(lang="en")
             .colorBox__Discription
               h2 !{item.colorName}
               h2 !{item.colorCode}
-              
+
       .PresentationBlock__text
         h1 This one is the sub-section or widget title
         h2 Next one is the item title inside widgets
@@ -47,10 +48,11 @@ html(lang="en")
     .formElements
       .PresentationBlock__formField
         +textField("Email", "Text Field")
-        +dropdownField("guests", "Dropdown")
+        +dropdownField("dropdownField", "Dropdown")
+        +guestsField("guests")
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
-        +button("click me", "theme_textOnly", "color_color1Opacity50") 
+        +button("click me", "theme_textOnly", "color_color1Opacity50")
         br
         +button("click me", "theme_withBorder")
         +button("click me", "theme_withBorder")(disabled)
@@ -80,13 +82,13 @@ html(lang="en")
         -
           var conditionsForDisabledItems = [
             {
-              value:'canGuest', 
-              label:'Широкий коридор', 
+              value:'canGuest',
+              label:'Широкий коридор',
               explanation: 'Ширина коридоров в номере не менее 91 см.'
             },
             {
-              value:'canPet', 
-              label:'Помощник для инвалидов', 
+              value:'canPet',
+              label:'Помощник для инвалидов',
               explanation: 'На 1 этаже вас встретит специалист и проводит до номера.'
             }
           ];
