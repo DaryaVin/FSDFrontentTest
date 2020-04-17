@@ -1,10 +1,8 @@
 mixin dropdown(id, title)
   .dropdown(id="dropdown" + id)&attributes(attributes)
     - var onClickFunction = "dropdownButton_OnClick(\"" + id + "\")"
-    button.dropdown__dropdownButton.spaceBetweenContener(onclick=onClickFunction)(id="dropdown__dropdownButton" + id)
+    button.dropdown__dropdownButton.spaceBetweenContener(id="dropdown__dropdownButton" + id)
       p !{title}
       div.arrow.dropdown__arrow
     .dropdown__dropdownContener(id="dropdown__dropdownContener" + id)
       block
-  script
-    include ../../common.blocks/dropdown/dropdown__dropdownButton.js
