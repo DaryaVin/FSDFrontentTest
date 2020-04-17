@@ -27,7 +27,7 @@
     $width: 266px;
     .dropdown__dropdownButton {
       @include h3;
-      color: $color1Opacity75;
+      color: $color1;
       width: $width;
       padding-right: 15px;
       &.formField__field_version_dropdown {
@@ -66,8 +66,8 @@
 .arrow {
   width: 7px;
   height: 7px;
-  border-bottom: 1px solid $color1Opacity50;
-  border-left: 1px solid $color1Opacity50;
+  border-bottom: 1px solid $color1Opacity75;
+  border-left: 1px solid $color1Opacity75;
   transform-origin: 50% 50%;
   transform: rotate(-45deg);
 }

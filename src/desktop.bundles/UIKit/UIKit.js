@@ -1,4 +1,5 @@
 import '@common/logo/logo.scss';
+import '@common/label/label.scss';
 import '@common/textField/textField.scss';
 import '@common/dropdown/dropdown.js';
 import '@common/button/button.scss';

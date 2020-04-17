@@ -3,6 +3,7 @@ html(lang="en")
   head
   body
     include ../../common.blocks/logo/logo.pug
+    include ../../common.blocks/label/label.pug
     include ../../common.blocks/textField/textField.pug
     include ../../common.blocks/numberPickerList/numberPickerList.pug
     include ../../common.blocks/dropdown/dropdown.pug
@@ -47,6 +48,7 @@ html(lang="en")
         p This is the body text which is used for most of the design, like paragraphs, lists, etc.
     .formElements
       .PresentationBlock__formField
+        +label("Email", "text Field").label_for_field
         +textField("Email", "Text Field")
         +dropdown("1", "expandable checkbox list").dropdown_theme_list
           -
@@ -56,7 +58,9 @@ html(lang="en")
                 {value:'canGuest', label:'Стул для кормления'}
               ];
           +checkboxButtons("","accommodations", accommodationsItems)
+        +label("guests", "Гости").label_for_field
         +guestsField("guests")
+        +label("equipment", "Удобства номера").label_for_field
         +equipmentField("equipment")
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
