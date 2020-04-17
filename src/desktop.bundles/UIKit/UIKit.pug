@@ -6,7 +6,6 @@ html(lang="en")
     include ../../common.blocks/textField/textField.pug
     include ../../common.blocks/numberPickerList/numberPickerList.pug
     include ../../common.blocks/dropdown/dropdown.pug
-    include ../../common.blocks/dropdownField/dropdownField.pug
     include ../../common.blocks/button/button.pug
     include ../../common.blocks/likeButton/likeButton.pug
     include ../../common.blocks/radioButton/radioButton.pug
@@ -18,6 +17,7 @@ html(lang="en")
     include ../../common.blocks/pagination/pagination.pug
     include ../../common.blocks/numberPicker/numberPicker.pug
     include ../../common.blocks/guestsField/guestsField.pug
+    include ../../common.blocks/equipmentField/equipmentField.pug
 
 
 
@@ -48,8 +48,16 @@ html(lang="en")
     .formElements
       .PresentationBlock__formField
         +textField("Email", "Text Field")
-        +dropdownField("dropdownField", "Dropdown")
+        +dropdown("1", "expandable checkbox list").dropdown_theme_list
+          -
+              var accommodationsItems = [
+                {value:'canSmoke', label:'Завтрак'},
+                {value:'canPet', label:'Письменный стол'},
+                {value:'canGuest', label:'Стул для кормления'}
+              ];
+          +checkboxButtons("","accommodations", accommodationsItems)
         +guestsField("guests")
+        +equipmentField("equipment")
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
         +button("click me", "theme_textOnly", "color_color1Opacity50")
