@@ -1,3 +1,4 @@
-mixin textField(id, label)
-  .formField.colomnsContener
-    input(id=id, type="text", placeholder=id).formField__field
+mixin textField(id)
+  .textField()&attributes(attributes)
+    input(id=id, type="text", placeholder=id).textField__field
+    +arrowForward().textField__arrowForward

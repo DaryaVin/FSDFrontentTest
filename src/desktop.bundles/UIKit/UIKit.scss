@@ -11,7 +11,7 @@ body > * {
   min-width: 320px;
 }
 .PresentationBlock__color {
-  
+
 }
 .colorBox {
   display: flex;
@@ -98,10 +98,14 @@ body > * {
     margin: 10px;
   }
 }
+.PresentationBlock__formField {
+  & > * {
+    margin: 20px 0;
+  }
+}
 .PresentationBlock__button {
   width: 340px;
   & > * {
     margin: 10px;
   }
 }
-

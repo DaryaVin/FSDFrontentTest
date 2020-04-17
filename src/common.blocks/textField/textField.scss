@@ -1,35 +1,53 @@
 @import '../сolorVariables/сolorVariables';
 @import '../fontMixins/fontMixins.scss';
 
-@mixin field {
-  box-sizing: border-box;
-  border: 1px solid $color1Opacity25;
-  border-radius: 4px;
-  padding: 12px 15px;
-  width: 320px;
-  outline: none;
-  @include baseText;
-  line-height: 18px;
-  color: $color1Opacity75;
-  &::placeholder {
-    color: $color1Opacity25;
-  }
-  &:hover, &:focus {
-    border-color: $color1Opacity50;
-  }
-}
+
 
 // .label {
 //   @include h3;
 // }
-.formField {
-  display: inline-block;
-}
+// .formField {
+//   display: inline-block;
+// }
 
 // .formField__label {
 //   padding-bottom: 5px;
 // }
 
-.formField__field  {
+.textField  {
+  display: inline-block;
+  position: relative;
   @include field;
+  &.textField_type_subscription {
+    width: 266px;
+    .textField__field {
+      width: 90%;
+    }
+    .textField__arrowForward {
+      opacity: 1;
+    }
+  }
+}
+.textField__field {
+  outline: none;
+  border: none;
+  width: 100%;
+  @include baseText;
+  line-height: inherit;
+  color: $color1Opacity75;
+  &::placeholder {
+    color: $color1Opacity25;
+  }
+}
+.textField__arrowForward {
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  right: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  path {
+    fill: url(#color2LinearGradient);
+  }
 }

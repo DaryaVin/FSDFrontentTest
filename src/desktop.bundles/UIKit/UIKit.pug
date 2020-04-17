@@ -4,6 +4,7 @@ html(lang="en")
   body
     include ../../common.blocks/logo/logo.pug
     include ../../common.blocks/label/label.pug
+    include ../../common.blocks/arrowForward/arrowForward.pug
     include ../../common.blocks/textField/textField.pug
     include ../../common.blocks/numberPickerList/numberPickerList.pug
     include ../../common.blocks/dropdown/dropdown.pug
@@ -48,20 +49,26 @@ html(lang="en")
         p This is the body text which is used for most of the design, like paragraphs, lists, etc.
     .formElements
       .PresentationBlock__formField
-        +label("Email", "text Field").label_for_field
-        +textField("Email", "Text Field")
+        .colomnsContener
+          +label("Email", "text Field").label_for_field
+          +textField("Email")
+        .colomnsContener
+          +label("Email", "subscription text field").label_for_field
+          +textField("Email1").textField_type_subscription
+        .colomnsContener
+          +label("guests", "Гости").label_for_field
+          +guestsField("guests")
+        .colomnsContener
+          +label("equipment", "Удобства номера").label_for_field
+          +equipmentField("equipment")
         +dropdown("1", "expandable checkbox list").dropdown_theme_list
           -
-              var accommodationsItems = [
+              var additionalServicesItems = [
                 {value:'canSmoke', label:'Завтрак'},
                 {value:'canPet', label:'Письменный стол'},
                 {value:'canGuest', label:'Стул для кормления'}
               ];
-          +checkboxButtons("","accommodations", accommodationsItems)
-        +label("guests", "Гости").label_for_field
-        +guestsField("guests")
-        +label("equipment", "Удобства номера").label_for_field
-        +equipmentField("equipment")
+          +checkboxButtons("","additionalServices", additionalServicesItems)
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
         +button("click me", "theme_textOnly", "color_color1Opacity50")
