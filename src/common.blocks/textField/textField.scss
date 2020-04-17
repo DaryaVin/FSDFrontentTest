@@ -1,25 +1,11 @@
 @import '../сolorVariables/сolorVariables';
 @import '../fontMixins/fontMixins.scss';
 
-
-
-// .label {
-//   @include h3;
-// }
-// .formField {
-//   display: inline-block;
-// }
-
-// .formField__label {
-//   padding-bottom: 5px;
-// }
-
 .textField  {
   display: inline-block;
   position: relative;
   @include field;
   &.textField_type_subscription {
-    width: 266px;
     .textField__field {
       width: 90%;
     }

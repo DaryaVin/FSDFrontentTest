@@ -1,20 +1,13 @@
 .equipmentField {
-  .dropdown {
-    position: relative;
-    &.dropdown_theme_field {
-      .dropdown__dropdownButton {
-        width: 266px;
-        p {
-          width: 160px;
-          max-height: 18px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          text-align: left;
-        }
-      }
-      .dropdown__dropdownContener {
-        width: 266px;
+  &.dropdown_theme_field {
+    .dropdown__dropdownButton {
+      p {
+        width: 69%;
+        max-height: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
       }
     }
   }

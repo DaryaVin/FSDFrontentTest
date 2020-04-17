@@ -45,6 +45,23 @@
         top: 0;
       }
     }
+
+  }
+  &.field_size_m{
+    .dropdown__dropdownButton {
+      width: 266px;
+    }
+    .dropdown__dropdownContener {
+      width: 266px;
+    }
+  }
+  &.field_size_s{
+    .dropdown__dropdownButton {
+      width: 160px;
+    }
+    .dropdown__dropdownContener {
+      width: 160px;
+    }
   }
 }
 .dropdown__dropdownButton {

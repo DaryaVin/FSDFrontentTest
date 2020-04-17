@@ -54,13 +54,13 @@ html(lang="en")
           +textField("Email")
         .colomnsContener
           +label("Email", "subscription text field").label_for_field
-          +textField("Email1").textField_type_subscription
+          +textField("Email1").textField_type_subscription.field_size_m
         .colomnsContener
           +label("guests", "Гости").label_for_field
           +guestsField("guests")
         .colomnsContener
           +label("equipment", "Удобства номера").label_for_field
-          +equipmentField("equipment")
+          +equipmentField("equipment").field_size_m
         +dropdown("1", "expandable checkbox list").dropdown_theme_list
           -
               var additionalServicesItems = [

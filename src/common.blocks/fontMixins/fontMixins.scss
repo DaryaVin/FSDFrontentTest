@@ -67,4 +67,11 @@
   &:hover, &:focus {
     border-color: $color1Opacity50;
   }
+  &.field_size_m {
+    width: 266px;
+  }
+  &.field_size_s {
+    width: 150px;
+  }
+
 }
