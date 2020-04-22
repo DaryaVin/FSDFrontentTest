@@ -51,7 +51,7 @@ html(lang="en")
       .PresentationBlock__formField
         .colomnsContener
           +label("Email", "text Field").label_for_field
-          +textField("Email")
+          +textField("ДД.ММ.ГГГГ").date
         .colomnsContener
           +label("Email", "subscription text field").label_for_field
           +textField("Email1").textField_type_subscription.field_size_m
@@ -69,6 +69,14 @@ html(lang="en")
                 {value:'canGuest', label:'Стул для кормления'}
               ];
           +checkboxButtons("","additionalServices", additionalServicesItems)
+        +dropdown("2", "size test").dropdown_theme_field.field_size_s.date
+          -
+            var sizeTestItems = [
+              {value: 1, lable: "test1"},
+              {value: 2, lable: "test2"},
+              {value: 3, lable: "test3"}
+            ]
+          +numberPickerList("dkdsvnvknc", sizeTestItems)
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
         +button("click me", "theme_textOnly", "color_color1Opacity50")

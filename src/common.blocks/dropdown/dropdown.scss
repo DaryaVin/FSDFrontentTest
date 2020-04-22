@@ -1,6 +1,6 @@
 @import '../сolorVariables/сolorVariables';
 @import '../fontMixins/fontMixins.scss';
-// @import '../textField/textField.scss';
+@import '../field/field.scss';
 
 
 .dropdown {
@@ -11,6 +11,13 @@
       &.formField__field_version_dropdown {
         border-radius: 4px  4px 0 0;
         border-color: $color1Opacity50;
+      }
+      p {
+        width: 90%;
+        height: 80%;
+        outline: none;
+        border: none;
+        text-align: left;
       }
     }
     .dropdown__dropdownContener {
@@ -26,10 +33,13 @@
   &.dropdown_theme_list {
     $width: 266px;
     .dropdown__dropdownButton {
-      @include h3;
-      color: $color1;
       width: $width;
       padding-right: 15px;
+      p {
+        @include h3;
+        color: $color1;
+        text-align: left;
+      }
       &.formField__field_version_dropdown {
         .arrow {
           transform: rotate(135deg);
@@ -48,6 +58,7 @@
 
   }
   &.field_size_m{
+    width: 266px;
     .dropdown__dropdownButton {
       width: 266px;
     }
@@ -56,11 +67,12 @@
     }
   }
   &.field_size_s{
+    width: 150px;
     .dropdown__dropdownButton {
-      width: 160px;
+      width: 150px;
     }
     .dropdown__dropdownContener {
-      width: 160px;
+      width: 150px;
     }
   }
 }

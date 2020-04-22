@@ -50,28 +50,3 @@
   line-height: 15px;
   text-transform: uppercase;
 }
-
-@mixin field {
-  box-sizing: border-box;
-  border: 1px solid $color1Opacity25;
-  border-radius: 4px;
-  padding: 12px 15px;
-  width: 320px;
-  outline: none;
-  @include baseText;
-  line-height: 18px;
-  color: $color1Opacity75;
-  &::placeholder {
-    color: $color1Opacity25;
-  }
-  &:hover, &:focus {
-    border-color: $color1Opacity50;
-  }
-  &.field_size_m {
-    width: 266px;
-  }
-  &.field_size_s {
-    width: 150px;
-  }
-
-}

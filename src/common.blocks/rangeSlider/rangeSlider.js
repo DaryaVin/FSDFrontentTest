@@ -1,4 +1,5 @@
-require('webpack-jquery-ui/slider');
+// require('webpack-jquery-ui/slider');
+import 'webpack-jquery-ui/slider';
 $( function() {
   $( ".rangeSlider__slider" ).slider({
     range: true,

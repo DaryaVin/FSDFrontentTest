@@ -1,7 +1,7 @@
 mixin dropdown(id, title)
   .dropdown(id="dropdown" + id)&attributes(attributes)
     button.dropdown__dropdownButton.spaceBetweenContener(id="dropdown__dropdownButton" + id)
-      p !{title}
+      p.textField__field !{title}
       div.arrow.dropdown__arrow
     .dropdown__dropdownContener(id="dropdown__dropdownContener" + id)
       block

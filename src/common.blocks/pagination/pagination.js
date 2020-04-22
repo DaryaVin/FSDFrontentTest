@@ -1,13 +1,7 @@
-// // import '@common/pagination/paginationPlugin.js';
-// require('jquery');
-// require('jquery-ui');
-// require('webpack-jquery-ui');
-// import $ from "jquery";
 // require('paginationjs');
-require('paginationjs');
-
-// require('paginationjs/dist/pagination.css');
+import 'paginationjs';
 import '@common/pagination/pagination.scss';
+
 $(function() {
   (function() {
     var container = $('.pagination__paging');

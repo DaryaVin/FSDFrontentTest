@@ -17,5 +17,6 @@ import '@common/numberPicker/numberPicker.js';
 import '@common/numberPickerList/numberPickerList.scss';
 import '@common/guestsField/guestsField.js';
 import '@common/equipmentField/equipmentField.js';
+import '@common/dateMask/dateMask.js';
 
 import './UIKit.scss';
