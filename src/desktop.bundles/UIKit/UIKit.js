@@ -19,4 +19,20 @@ import '@common/guestsField/guestsField.js';
 import '@common/equipmentField/equipmentField.js';
 import '@common/dateMask/dateMask.js';
 
+import * as dateFunctions from '@common/dateMask/dateMask.js';
+
 import './UIKit.scss';
+
+$("#dateField").each(function(){
+  var date = $(this);
+  var minDate = new Date("1900, 01, 01"),
+    maxDate = new Date();
+  dateFunctions.date(date, minDate, maxDate);
+});
+
+$('#dateRangeField').each(function() {
+  var date = $(this);
+  var minDate = new Date(),
+    maxDate = new Date("+30d");
+  dateFunctions.dateRange(date, minDate, maxDate);
+});

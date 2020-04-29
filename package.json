@@ -44,7 +44,6 @@
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
     "paginationjs": "^2.1.5",
-    "pickadate": "^5.0.0-alpha.3",
     "webpack-jquery-ui": "^2.0.1"
   }
 }

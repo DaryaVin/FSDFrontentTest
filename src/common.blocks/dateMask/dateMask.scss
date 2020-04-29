@@ -1,0 +1,161 @@
+@import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins.scss';
+
+.ui-datepicker {
+  $width: 280px;
+  background: $colorBcg;
+  width: $width;
+  padding: 0;
+  margin: 0;
+  .ui-datepicker-header {
+    height: 25px;
+    margin-bottom: 30px;
+    .ui-datepicker-title {
+      @include h2;
+      color: $color1;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin-left: 65px;
+      .ui-datepicker-year {
+        @include h2;
+        color: $color1;
+        text-align: left;
+        border: none;
+        outline: none;
+        width: 65px;
+      }
+    }
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+      background-color: $color2;
+      // background-repeat: no-repeat;
+      // background-position: center;
+      width: 24px;
+      height: 24px;
+      &.ui-state-disabled {
+        background-color: $color1Opacity25;
+      }
+    }
+    .ui-datepicker-prev {
+      // background-image: url("../../font/arrow_back.svg");
+      -webkit-mask: url("../../font/arrow_back.svg") no-repeat center;
+      -moz-mask: url("../../font/arrow_back.svg") no-repeat center;
+      mask: url("../../font/arrow_back.svg") no-repeat center;
+
+    }
+    .ui-datepicker-next {
+      // background-image: url(../../font/arrow_forward.svg);
+      -webkit-mask: url("../../font/arrow_forward.svg") no-repeat center;
+      -moz-mask: url("../../font/arrow_forward.svg") no-repeat center;
+      mask: url("../../font/arrow_forward.svg") no-repeat center;
+    }
+  }
+  .ui-datepicker-calendar {
+    td, th {
+      padding: 0;
+      margin: 0;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: $width/7;
+      height: $width/7;
+    }
+    th {
+      color: $color2;
+    }
+    td {
+      @include h3;
+      font-weight: normal;
+      position: relative;
+      &.ui-datepicker-current-day {
+        a {
+          @include linearGradient(background, $color2, $color2Gradiend);
+          border-radius: 50%;
+          color: $colorBcg;
+          font-weight: bold;
+        }
+      }
+
+      &.selected {
+        @include linearGradient(background, transparentize($color2,0.75), transparentize($color2Gradiend, 0.75));
+        a{
+          z-index: 2;
+        }
+        &.selected-start,
+        &.selected-end {
+          @include linearGradient(background, $color2, $color2Gradiend);
+          border-radius: 50%;
+          a {
+
+            color: $colorBcg;
+            font-weight: bold;
+          }
+        }
+        &.selected-start:not(.selected-end),
+        &.selected-end:not(.selected-start) {
+          &::before {
+            content: "";
+            @include linearGradient(background, transparentize($color2,0.75), transparentize($color2Gradiend, 0.75));
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+          }
+        }
+        &.selected-start:not(.selected-end) {
+          &::before {
+            left: 50%;
+            right: 0;
+          }
+        }
+        &.selected-end:not(.selected-start) {
+          &::before {
+            left: 0;
+            right: 50%;
+          }
+        }
+      }
+      a {
+        color: $color1Opacity50;
+        width: $width/7;
+        height: $width/7;
+        padding: ($width/7-15)/2;
+        text-align: center;
+        vertical-align: top;
+        &.ui-state-hover {
+          @include linearGradient(background, $color3, $color3Gradiend);
+          border-radius: 50%;
+          color: $colorBcg;
+          font-weight: bold;
+        }
+      }
+      &.ui-datepicker-other-month,
+      &.ui-state-disabled {
+        .ui-state-default {
+          color: $color1Opacity25;
+        }
+      }
+      &:first-child {
+        &.selected:not(.selected-start):not(.selected-end) {
+          border-radius: 50% 0 0 50%;
+        }
+        &.selected-end:not(.selected-start) {
+          &::before {
+            opacity: 0;
+          }
+        }
+      }
+      &:last-child {
+        &.selected:not(.selected-start):not(.selected-end) {
+          border-radius: 0 50% 50% 0;
+        }
+        &.selected-start:not(.selected-end) {
+          &::before {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}

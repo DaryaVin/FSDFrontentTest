@@ -1,4 +1,3 @@
-// require('paginationjs');
 import 'paginationjs';
 import '@common/pagination/pagination.scss';
 
