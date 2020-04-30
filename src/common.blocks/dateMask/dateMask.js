@@ -103,9 +103,10 @@ export function dateRange(date, minDate, maxDate) {
         // extensionRange - объект расширения
         // console.log("extensionRange" +  extensionRange.toJson);
         console.dir(extensionRange)
-        field.val(extensionRange.startDateText + extensionRange.endDateText);
+        field.val(extensionRange.startDateText + "-" + extensionRange.endDateText);
         // field.val(extensionRange.startDateText + " - " + extensionRange.endDateText);
       }
   };
-  Inputmask(optInputmask).mask(field.datepicker(optDatepicker));
+  // Inputmask(optInputmask).mask(field.datepicker(optDatepicker));
+  field.datepicker(optDatepicker)
 }

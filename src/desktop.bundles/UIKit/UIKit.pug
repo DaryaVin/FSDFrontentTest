@@ -20,6 +20,7 @@ html(lang="ru")
     include ../../common.blocks/numberPicker/numberPicker.pug
     include ../../common.blocks/guestsField/guestsField.pug
     include ../../common.blocks/equipmentField/equipmentField.pug
+    include ../../common.blocks/funcAddMultipleBlocks/funcAddMultipleBlocks.pug
 
 
 
@@ -64,14 +65,17 @@ html(lang="ru")
         .colomnsContener
           +label("equipment", "Удобства номера").label_for_field
           +equipmentField("equipment").field_size_m
-        +dropdown("1", "expandable checkbox list").dropdown_theme_list
-          -
+        +dropdown("1").dropdown_theme_list
+          +addBlock('button')
+            p expandable checkbox list
+          +addBlock('contener')
+            -
               var additionalServicesItems = [
                 {value:'canSmoke', label:'Завтрак'},
                 {value:'canPet', label:'Письменный стол'},
                 {value:'canGuest', label:'Стул для кормления'}
               ];
-          +checkboxButtons("","additionalServices", additionalServicesItems)
+            +checkboxButtons("","additionalServices", additionalServicesItems)
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
         +button("click me", "theme_textOnly", "color_color1Opacity50")

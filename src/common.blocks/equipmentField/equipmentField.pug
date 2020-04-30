@@ -1,9 +1,12 @@
 mixin equipmentField(id)
     +dropdown(id, "").equipmentField.dropdown_theme_field()&attributes(attributes)
-      -
-          var numberPickerListItems = [
+      +addBlock('button')
+        p Удобства номера
+      +addBlock('contener')
+        -
+          var equipmentField__numberPickerListItems = [
             {value:'bedrooms', label:'Спальни'},
             {value:'beds', label:'Кровати'},
             {value:'bathrooms', label:'Bанные комнаты'}
           ]
-      +numberPickerList(id, numberPickerListItems)
+        +numberPickerList(id, equipmentField__numberPickerListItems)

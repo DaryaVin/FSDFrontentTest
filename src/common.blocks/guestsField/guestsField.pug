@@ -1,9 +1,12 @@
 mixin guestsField(id)
-  +dropdown(id, "Сколько гостей").guestsField.dropdown_theme_field
-    -
-        var numberPickerListItems = [
-          {value:'adults', label:'Взрослые'},
-          {value:'children', label:'Дети'},
-          {value:'babies', label:'Младенцы'}
-        ]
-    +numberPickerList(id, numberPickerListItems).numberPickerList_theme_withButtonBox
+  +dropdown(id).guestsField.dropdown_theme_field
+    +addBlock('button')
+      p Сколько гостей
+    +addBlock('contener')
+      -
+          var numberPickerListItems = [
+            {value:'adults', label:'Взрослые'},
+            {value:'children', label:'Дети'},
+            {value:'babies', label:'Младенцы'}
+          ]
+      +numberPickerList(id, numberPickerListItems).numberPickerList_theme_withButtonBox
