@@ -37,15 +37,17 @@
     $width: 266px;
     .dropdown__dropdownButton {
       width: $width;
-      padding-right: 15px;
+      // padding-right: 15px;
       p {
         @include h3;
         color: $color1;
         text-align: left;
       }
       &.formField__field_version_dropdown {
-        .arrow {
+        &::before {
           transform: rotate(135deg);
+          margin-top: -2px;
+
         }
       }
     }

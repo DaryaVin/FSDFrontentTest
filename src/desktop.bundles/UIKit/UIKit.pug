@@ -21,7 +21,7 @@ html(lang="ru")
     include ../../common.blocks/guestsField/guestsField.pug
     include ../../common.blocks/equipmentField/equipmentField.pug
     include ../../common.blocks/funcAddMultipleBlocks/funcAddMultipleBlocks.pug
-
+    include ../../common.blocks/calendarCard/calendarCard.pug
 
 
     .colorAndType
@@ -76,6 +76,8 @@ html(lang="ru")
                 {value:'canGuest', label:'Стул для кормления'}
               ];
             +checkboxButtons("","additionalServices", additionalServicesItems)
+        +textField("calendarCardField")
+        +calendarCard()
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
         +button("click me", "theme_textOnly", "color_color1Opacity50")

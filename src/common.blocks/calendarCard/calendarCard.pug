@@ -1,0 +1,6 @@
+mixin calendarCard()
+  .calendarCard
+    .calendarCard__datepicker
+    .calendarCard__buttonBox
+      +button("Применить", "theme_textOnly", "color_color2").calendarCard__executeButton
+      +button("Очистить", "theme_textOnly", "color_color1Opacity50")(hidden).calendarCard__resetButton

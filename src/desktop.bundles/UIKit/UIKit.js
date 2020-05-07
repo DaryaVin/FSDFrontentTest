@@ -18,8 +18,10 @@ import '@common/numberPickerList/numberPickerList.scss';
 import '@common/guestsField/guestsField.js';
 import '@common/equipmentField/equipmentField.js';
 import '@common/dateMask/dateMask.js';
+import '@common/calendarCard/calendarCard.js';
 
-import * as dateFunctions from '@common/dateMask/dateMask.js';
+import * as calendarCardFuncs from '@common/calendarCard/calendarCard.js';
+import * as dateFuncs from '@common/dateMask/dateMask.js';
 
 import './UIKit.scss';
 
@@ -27,12 +29,21 @@ $("#dateField").each(function(){
   var date = $(this);
   var minDate = new Date("1900, 01, 01"),
     maxDate = new Date();
-  dateFunctions.date(date, minDate, maxDate);
+    dateFuncs.addDateMask(date, minDate, maxDate);
 });
 
-$('#dateRangeField').each(function() {
+// $('#dateRangeField').each(function() {
+//   var date = $(this);
+//   var minDate = new Date(),
+//     maxDate = new Date("+30d");
+//     dateFuncs.dateRange(date, minDate, maxDate);
+// });
+
+$('.calendarCard').each(function() {
   var date = $(this);
-  var minDate = new Date(),
-    maxDate = new Date("+30d");
-  dateFunctions.dateRange(date, minDate, maxDate);
+  var field = $('#calendarCardField');
+  var minDate = new Date("2020, 01, 01"),
+    maxDate = new Date();
+  calendarCardFuncs.addMinMaxDates(date);
+  calendarCardFuncs.addDateRange(date);
 });
