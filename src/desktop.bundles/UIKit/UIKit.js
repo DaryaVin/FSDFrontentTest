@@ -19,6 +19,8 @@ import '@common/guestsField/guestsField.js';
 import '@common/equipmentField/equipmentField.js';
 import '@common/dateMask/dateMask.js';
 import '@common/calendarCard/calendarCard.js';
+import '@common/dateField/dateField.js';
+
 
 import * as calendarCardFuncs from '@common/calendarCard/calendarCard.js';
 import * as dateFuncs from '@common/dateMask/dateMask.js';
@@ -29,7 +31,7 @@ $("#dateField").each(function(){
   var date = $(this);
   var minDate = new Date("1900, 01, 01"),
     maxDate = new Date();
-    dateFuncs.addDateMask(date, minDate, maxDate);
+  dateFuncs.addDateMask(date, minDate, maxDate);
 });
 
 // $('#dateRangeField').each(function() {
@@ -38,12 +40,3 @@ $("#dateField").each(function(){
 //     maxDate = new Date("+30d");
 //     dateFuncs.dateRange(date, minDate, maxDate);
 // });
-
-$('.calendarCard').each(function() {
-  var date = $(this);
-  var field = $('#calendarCardField');
-  var minDate = new Date("2020, 01, 01"),
-    maxDate = new Date();
-  calendarCardFuncs.addMinMaxDates(date);
-  calendarCardFuncs.addDateRange(date);
-});

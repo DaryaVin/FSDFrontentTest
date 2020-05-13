@@ -22,7 +22,7 @@ html(lang="ru")
     include ../../common.blocks/equipmentField/equipmentField.pug
     include ../../common.blocks/funcAddMultipleBlocks/funcAddMultipleBlocks.pug
     include ../../common.blocks/calendarCard/calendarCard.pug
-
+    include ../../common.blocks/dateField/dateField.pug
 
     .colorAndType
       .PresentationBlock__color
@@ -78,6 +78,7 @@ html(lang="ru")
             +checkboxButtons("","additionalServices", additionalServicesItems)
         +textField("calendarCardField")
         +calendarCard()
+        +dateField()
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
         +button("click me", "theme_textOnly", "color_color1Opacity50")

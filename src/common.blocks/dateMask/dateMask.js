@@ -1,7 +1,5 @@
-import Inputmask from 'inputmask/lib/extensions/inputmask.date.extensions';
-import 'webpack-jquery-ui/datepicker';
-import '@common/dateMask/dateMask.scss';
-import '@common/calendarCard/datepicker.js';
+import 'inputmask/dist/jquery.inputmask';
+// import '@common/dateMask/dateMask.scss';
 
 
 function addZero(digits_length, source){
@@ -11,27 +9,46 @@ function addZero(digits_length, source){
   return text;
 };
 
+function dateStr(date) {
+  var dateStr = addZero(2, date.getDate()) + "." + addZero(2, date.getMonth() + 1) + '.' + addZero(4, date.getFullYear());
+  return dateStr;
+};
+
 export function addDateMask(date, minDate = null, maxDate = null) {
-  var field = date,
-    minDateStr = '',
-    maxDateStr = '';
+  var field = date;
   var optInputmask = {
     alias: 'datetime',
     inputFormat: 'dd.mm.yyyy',
     placeholder: 'ДД.ММ.ГГГГ',
     undoOnEscape: true,
+    positionCaretOnClick: "radixFocus",
+    insertMode: false,
+    insertModeVisual: true,
+    onKeyValidation: function (key, result) {
+      if (!result && key != 44 && key != 46 && key !=47 && !field.inputmask("isComplete")) {
+        var validationStr = "В данном поле должна быть указана дата в формате \"ДД.ММ.ГГГГ\". ";
+        if (dateRangeStr) {
+          validationStr += "Данная дата должна находиться в рамках" + dateRangeStr;
+        }
+        alert(validationStr);
+      }
+    },
   };
+  var dateRangeStr = '';
   if (minDate) {
-    minDateStr = addZero(2, minDate.getDate()) + "." + addZero(2, minDate.getMonth() + 1) + '.' + addZero(4, minDate.getFullYear());
-    Object.assign(optInputmask, { min: minDateStr});
+    var minDateStr = dateStr(minDate);
+    Object.assign(optInputmask, { min: minDateStr });
+    dateRangeStr += " с " + minDateStr;
   }
   if (maxDate) {
-    maxDateStr = addZero(2, maxDate.getDate()) + "." + addZero(2, maxDate.getMonth() + 1) + '.' + addZero(4, maxDate.getFullYear());
-    Object.assign(optInputmask, { max: maxDateStr});
+    var maxDateStr = dateStr(maxDate);
+    Object.assign(optInputmask, { max: maxDateStr });
+    dateRangeStr += " по " + maxDateStr;
   }
   field.attr('spellcheck','false');
   field.attr('contenteditable','true');
-  Inputmask(optInputmask).mask(field);
+  field.attr('placeholder','ДД.ММ.ГГГГ');
+  field.inputmask(optInputmask);
 }
 
 // export function date(date, minDate, maxDate) {

@@ -1,0 +1,12 @@
+@import '../сolorVariables/сolorVariables';
+@import '../fontMixins/fontMixins.scss';
+@import '../field/field.scss';
+
+.dateField {
+  .dropdown__dropdownButton input{
+    @include field;
+  }
+  .calendarCard{
+    margin-top: 5px;
+  }
+}
