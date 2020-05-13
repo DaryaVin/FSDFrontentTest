@@ -50,12 +50,24 @@ $('.calendarCard').each(function() {
 
 export function addMinMaxDates(date, minDate = null, maxDate = null) {
   var calendarCard = date,
-  calendar = calendarCard.find('.calendarCard__datepicker');
+    calendar = {};
+  if (!calendarCard.hasClass('.calendarCard__datepicker')) {
+    calendar = calendarCard;
+    console.log('calendar = calendarCard');
+
+    console.log(calendarCard);
+  } else {
+    calendar = calendarCard.find('.calendarCard__datepicker');
+    console.log("calendar != calendarCard");
+
+    console.log(calendarCard);
+  }
+
   var yearRangeStr = '';
   if (minDate) {
     yearRangeStr += minDate.getFullYear();
   } else {
-    yearRangeStr += "-10";
+    yearRangeStr += "-100";
   }
   if (maxDate) {
     yearRangeStr += ":" + maxDate.getFullYear();

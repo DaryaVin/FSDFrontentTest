@@ -23,6 +23,8 @@ html(lang="ru")
     include ../../common.blocks/funcAddMultipleBlocks/funcAddMultipleBlocks.pug
     include ../../common.blocks/calendarCard/calendarCard.pug
     include ../../common.blocks/dateDropdown/dateDropdown.pug
+    include ../../common.blocks/selectStartEndDates/selectStartEndDates.pug
+
 
     .colorAndType
       .PresentationBlock__color
@@ -79,6 +81,7 @@ html(lang="ru")
         +textField("calendarCardField")
         +calendarCard()
         +dateDropdown()
+        +selectStartEndDates()#selectStartEndDates
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
         +button("click me", "theme_textOnly", "color_color1Opacity50")

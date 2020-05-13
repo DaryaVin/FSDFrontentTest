@@ -20,10 +20,12 @@ import '@common/equipmentField/equipmentField.js';
 import '@common/dateMask/dateMask.js';
 import '@common/calendarCard/calendarCard.js';
 import '@common/dateDropdown/dateDropdown.js';
+import '@common/selectStartEndDates/selectStartEndDates.js';
 
 
 import * as calendarCardFuncs from '@common/calendarCard/calendarCard.js';
 import * as dateFuncs from '@common/dateMask/dateMask.js';
+import * as selectStartEndDatesFuncs from  '@common/selectStartEndDates/selectStartEndDates.js';
 
 import './UIKit.scss';
 
@@ -33,7 +35,12 @@ $("#dateDropdown").each(function(){
     maxDate = new Date();
   dateFuncs.addDateMask(date, minDate, maxDate);
 });
-
+$('#selectStartEndDates').each(function() {
+  var date = $(this);
+  var minDate = new Date("2020, 01, 01"),
+    maxDate = new Date();
+  selectStartEndDatesFuncs.addMinMaxDates(date, minDate, maxDate);
+})
 // $('#dateRangeField').each(function() {
 //   var date = $(this);
 //   var minDate = new Date(),

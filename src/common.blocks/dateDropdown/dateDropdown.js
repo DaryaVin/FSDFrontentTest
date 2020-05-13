@@ -13,9 +13,15 @@ $(".dateDropdown").each(function() {
 
   dateFuncs.addDateMask(field);
 
-  executeButton.click(function() {
+  calendar.change(function() {
     var date = $.datepicker.formatDate("dd.mm.yy", calendar.datepicker('getDate'));
     field.val(date);
+  })
+
+  executeButton.click(function() {
+    // var date = $.datepicker.formatDate("dd.mm.yy", calendar.datepicker('getDate'));
+    // field.val(date);
+    field.click();
   });
   resetButton.click(function() {
     field.val('');

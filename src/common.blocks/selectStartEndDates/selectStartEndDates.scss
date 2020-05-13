@@ -1,0 +1,28 @@
+.selectStartEndDates {
+  .dropdown.field_size_s{
+    width: 150px;
+    .dropdown__dropdownButton {
+      width: 150px;
+      input {
+        width: 150px;
+      }
+    }
+    .dropdown__dropdownContener {
+      width: 320px;
+    }
+    &.selectStartEndDates__startDate {
+      .dropdown__dropdownContener {
+        &.show {
+          left: 0;
+        }
+      }
+    }
+    &.selectStartEndDates__endDate {
+      .dropdown__dropdownContener {
+        &.show {
+          right: 0;
+        }
+      }
+    }
+  }
+}
