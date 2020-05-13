@@ -22,7 +22,7 @@ html(lang="ru")
     include ../../common.blocks/equipmentField/equipmentField.pug
     include ../../common.blocks/funcAddMultipleBlocks/funcAddMultipleBlocks.pug
     include ../../common.blocks/calendarCard/calendarCard.pug
-    include ../../common.blocks/dateField/dateField.pug
+    include ../../common.blocks/dateDropdown/dateDropdown.pug
 
     .colorAndType
       .PresentationBlock__color
@@ -52,7 +52,7 @@ html(lang="ru")
       .PresentationBlock__formField
         .colomnsContener
           +label("Email", "text Field").label_for_field
-          +textField("dateField")
+          +textField("dateDropdown")
         .colomnsContener
           +label("Email", "text Field").label_for_field
           +textField("dateRangeField")
@@ -78,7 +78,7 @@ html(lang="ru")
             +checkboxButtons("","additionalServices", additionalServicesItems)
         +textField("calendarCardField")
         +calendarCard()
-        +dateField()
+        +dateDropdown()
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
         +button("click me", "theme_textOnly", "color_color1Opacity50")

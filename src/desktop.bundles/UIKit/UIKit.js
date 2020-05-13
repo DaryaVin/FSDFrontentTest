@@ -19,7 +19,7 @@ import '@common/guestsField/guestsField.js';
 import '@common/equipmentField/equipmentField.js';
 import '@common/dateMask/dateMask.js';
 import '@common/calendarCard/calendarCard.js';
-import '@common/dateField/dateField.js';
+import '@common/dateDropdown/dateDropdown.js';
 
 
 import * as calendarCardFuncs from '@common/calendarCard/calendarCard.js';
@@ -27,7 +27,7 @@ import * as dateFuncs from '@common/dateMask/dateMask.js';
 
 import './UIKit.scss';
 
-$("#dateField").each(function(){
+$("#dateDropdown").each(function(){
   var date = $(this);
   var minDate = new Date("1900, 01, 01"),
     maxDate = new Date();

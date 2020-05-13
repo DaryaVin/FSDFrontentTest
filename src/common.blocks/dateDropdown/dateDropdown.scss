@@ -2,7 +2,7 @@
 @import '../fontMixins/fontMixins.scss';
 @import '../field/field.scss';
 
-.dateField {
+.dateDropdown {
   .dropdown__dropdownButton input{
     @include field;
   }
