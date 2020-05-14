@@ -43,7 +43,7 @@ $('.calendarCard').each(function() {
   resetButton.click(function() {
     calendar.datepicker("setDate");
     resetButton.prop('hidden', true);
-    console.log(calendar.datepicker('widget').data('datepickerExtensionRange'));
+    // console.log(calendar.datepicker('widget').data('datepickerExtensionRange'));
   });
 
 });
@@ -53,14 +53,8 @@ export function addMinMaxDates(date, minDate = null, maxDate = null) {
     calendar = {};
   if (!calendarCard.hasClass('.calendarCard__datepicker')) {
     calendar = calendarCard;
-    console.log('calendar = calendarCard');
-
-    console.log(calendarCard);
   } else {
     calendar = calendarCard.find('.calendarCard__datepicker');
-    console.log("calendar != calendarCard");
-
-    console.log(calendarCard);
   }
 
   var yearRangeStr = '';
@@ -82,14 +76,19 @@ export function addMinMaxDates(date, minDate = null, maxDate = null) {
   calendar.datepicker("option", optDatepicker);
 }
 
-export function addDateRange(date) {
-  var calendarCard = date,
-  calendar = calendarCard.find('.calendarCard__datepicker');
-  var optDatepicker = {
-    range: 'period',
-    numberOfMonths: 1
-    // onSelect: function(dateText, inst, extensionRange) {
-    // }
-  };
-  calendar.datepicker("option", optDatepicker);
-}
+// export function addDateRange(date) {
+//   var calendarCard = date,
+//     calendar = {};
+//   if (!calendarCard.hasClass('.calendarCard__datepicker')) {
+//     calendar = calendarCard;
+//   } else {
+//     calendar = calendarCard.find('.calendarCard__datepicker');
+//   }
+//   var optDatepicker = {
+//     range: 'period',
+//     numberOfMonths: 1
+//     // onSelect: function(dateText, inst, extensionRange) {
+//     // }
+//   };
+//   calendar.datepicker("option", optDatepicker);
+// }

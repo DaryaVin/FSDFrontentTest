@@ -10,8 +10,15 @@ $('.dropdown').each(function() {
       dropdownButton.toggleClass("formField__field_version_dropdown");
       dropdownContener.toggleClass("show");
     });
-    dropdownButtonContent.click(function() {
-      dropdownButton.click();
+    dropdownButtonContent.focus(function() {
+      if (!dropdownButtonContent.attr('readonly')) {
+        if (!dropdownButton.hasClass('formField__field_version_dropdown')) {
+          dropdownButton.addClass('formField__field_version_dropdown');
+        }
+        if (!dropdownContener.hasClass('show')) {
+          dropdownContener.addClass('show');
+        }
+      }
     });
     $(document).mouseup(function(event) {
       if (!dropdown.is(event.target) && dropdown.has(event.target).length === 0) {

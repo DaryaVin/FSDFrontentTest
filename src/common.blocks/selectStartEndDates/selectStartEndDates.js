@@ -12,18 +12,17 @@ $(".selectStartEndDates").each(function() {
       fieldEndDate= endtDateDropdown.find('.dropdown__dropdownButton input'),
       calendarEndDate= endtDateDropdown.find('.calendarCard__datepicker');
 
+  // calendarStartDate.datepicker("onSelect", function() {
+  //   calendarEndDate.datepicker( "option", "minDate", date );
+  // })
   calendarStartDate.change(function() {
     if (fieldStartDate.inputmask("isComplete")) {
-      var date = $.datepicker.formatDate("dd.mm.yy", calendarStartDate.datepicker('getDate'));
-      calendarEndDate.datepicker( "option", "minDate", date );
-      console.dir(calendarEndDate.datepicker("option", "minDate"));
+      calendarEndDate.datepicker( "option", "minDate", calendarStartDate.datepicker('getDate') );
     }
   });
   calendarEndDate.change(function() {
     if (fieldEndDate.inputmask("isComplete")) {
-      var date = $.datepicker.formatDate("dd.mm.yy", calendarEndDate.datepicker('getDate'));
-      calendarStartDate.datepicker( "option", "maxDate", date );
-      console.dir(calendarStartDate.datepicker("option", "minDate"));
+      calendarStartDate.datepicker( "option", "maxDate", calendarEndDate.datepicker('getDate') );
     }
   });
 });

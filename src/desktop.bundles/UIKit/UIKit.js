@@ -26,20 +26,27 @@ import '@common/selectStartEndDates/selectStartEndDates.js';
 import * as calendarCardFuncs from '@common/calendarCard/calendarCard.js';
 import * as dateFuncs from '@common/dateMask/dateMask.js';
 import * as selectStartEndDatesFuncs from  '@common/selectStartEndDates/selectStartEndDates.js';
+import * as dateDropdownFuncs  from  '@common/dateDropdown/dateDropdown.js';
 
 import './UIKit.scss';
 
-$("#dateDropdown").each(function(){
-  var date = $(this);
+$("#dateMask").each(function(){
+  var data = $(this);
   var minDate = new Date("1900, 01, 01"),
     maxDate = new Date();
-  dateFuncs.addDateMask(date, minDate, maxDate);
+  dateFuncs.addDateMask(data, minDate, maxDate);
 });
 $('#selectStartEndDates').each(function() {
-  var date = $(this);
+  var data = $(this);
   var minDate = new Date("2020, 01, 01"),
     maxDate = new Date();
-  selectStartEndDatesFuncs.addMinMaxDates(date, minDate, maxDate);
+  selectStartEndDatesFuncs.addMinMaxDates(data, minDate, maxDate);
+})
+$("#dateDropdown").each(function() {
+  var data = $(this);
+  var minDate = new Date("2000, 01, 01"),
+    maxDate = new Date("2001, 01, 01");
+  dateDropdownFuncs.addMinMaxDates(data, minDate, maxDate);
 })
 // $('#dateRangeField').each(function() {
 //   var date = $(this);

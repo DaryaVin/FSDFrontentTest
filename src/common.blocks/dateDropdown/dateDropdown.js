@@ -1,30 +1,57 @@
 import '@common/dateDropdown/dateDropdown.scss';
 import 'webpack-jquery-ui/datepicker';
-import '@common/dateMask/dateMask.js';
-// import 'inputmask/lib/extensions/inputmask.date.extensions';
 import * as dateFuncs from '@common/dateMask/dateMask.js';
+import * as calendarCardFuncs from '@common/calendarCard/calendarCard.js';
 
 $(".dateDropdown").each(function() {
   var dateDropdown = $(this),
-  field = dateDropdown.find('.dropdown__dropdownButton input'),
-  calendar = dateDropdown.find('.calendarCard__datepicker'),
-  resetButton = dateDropdown.find('.calendarCard__resetButton'),
-  executeButton = dateDropdown.find('.calendarCard__executeButton');
+    dropdownButton = dateDropdown.find('.dropdown__dropdownButton'),
+    field = dropdownButton.find('input'),
+    calendar = dateDropdown.find('.calendarCard__datepicker'),
+    resetButton = dateDropdown.find('.calendarCard__resetButton'),
+    executeButton = dateDropdown.find('.calendarCard__executeButton');
 
-  dateFuncs.addDateMask(field);
-
-  calendar.change(function() {
-    var date = $.datepicker.formatDate("dd.mm.yy", calendar.datepicker('getDate'));
-    field.val(date);
-  })
+  var _theme_dateRange = false;
+  if (dateDropdown.hasClass('dateDropdown_theme_dateRange')) {
+    _theme_dateRange = true;
+    // calendarCard.addDateRange(calendar);
+    var optDatepicker = {
+      range: 'period',
+      numberOfMonths: 1,
+      onSelect: function(dateText, inst, extensionRange) {
+        var monthNamesShort = calendar.datepicker("option","monthNamesShort");
+        var startDate = $.datepicker.formatDate("d M", extensionRange.startDate, {monthNamesShort: monthNamesShort});
+        var endDate = $.datepicker.formatDate("d M", extensionRange.endDate, {monthNamesShort: monthNamesShort});
+        field.val(startDate + " - " + endDate);
+        calendar.change();
+      }
+    };
+    calendar.datepicker("option", optDatepicker);
+    field.attr('readonly', 'true');
+    field.val('Выберете даты пребывания в отеле');
+  } else {
+    dateFuncs.addDateMask(field);
+    var optDatepicker = {
+      onSelect: function(dateText, inst) {
+        field.val(dateText);
+        calendar.change();
+      }
+    };
+    calendar.datepicker("option", optDatepicker);
+  }
 
   executeButton.click(function() {
-    // var date = $.datepicker.formatDate("dd.mm.yy", calendar.datepicker('getDate'));
-    // field.val(date);
-    field.click();
+    dropdownButton.click();
+  });
+  field.click(function() {
+
   });
   resetButton.click(function() {
-    field.val('');
+    if (_theme_dateRange) {
+      field.val('Выберете даты пребывания в отеле')
+    } else {
+      field.val('');
+    }
   });
   field.on('keyup', function() {
     if (field.inputmask("isComplete")) {
@@ -34,3 +61,11 @@ $(".dateDropdown").each(function() {
     };
   });
 });
+
+export function addMinMaxDates(data, minDate = null, maxDate = null) {
+  var dateDropdown = data,
+    field = dateDropdown.find('.dropdown__dropdownButton input'),
+    calendar = dateDropdown.find('.calendarCard__datepicker');
+  dateFuncs.addDateMask(field, minDate, maxDate);
+  calendarCardFuncs.addMinMaxDates(calendar, minDate, maxDate);
+}

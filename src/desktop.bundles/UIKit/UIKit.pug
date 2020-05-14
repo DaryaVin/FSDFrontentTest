@@ -54,7 +54,7 @@ html(lang="ru")
       .PresentationBlock__formField
         .colomnsContener
           +label("Email", "text Field").label_for_field
-          +textField("dateDropdown")
+          +textField("dateDropdown")#dateMask
         .colomnsContener
           +label("Email", "text Field").label_for_field
           +textField("dateRangeField")
@@ -80,7 +80,8 @@ html(lang="ru")
             +checkboxButtons("","additionalServices", additionalServicesItems)
         +textField("calendarCardField")
         +calendarCard()
-        +dateDropdown()
+        +dateDropdown().dateDropdown_theme_dateRange
+        +dateDropdown()#dateDropdown
         +selectStartEndDates()#selectStartEndDates
       .PresentationBlock__button
         +button("click me", "theme_textOnly", "color_color2")
