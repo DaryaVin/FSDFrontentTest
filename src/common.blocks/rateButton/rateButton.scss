@@ -1,5 +1,4 @@
-@import '../сolorVariables/сolorVariables';
-@import '../fontMixins/fontMixins.scss';
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
 
 .rateButton {
   width: 120px;
@@ -25,7 +24,7 @@
   //   ~ .rateButton__label path {
   //     fill: $color1Opacity50;
   //   }
-  // } 
+  // }
 }
 .star {
   cursor: pointer;
@@ -43,5 +42,3 @@
     }
   }
 }
-
-

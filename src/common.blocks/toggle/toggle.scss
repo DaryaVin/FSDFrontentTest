@@ -1,5 +1,4 @@
-@import '../сolorVariables/сolorVariables';
-@import '../fontMixins/fontMixins';
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
 
 .toggleButtonBox {
   @include baseText;

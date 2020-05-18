@@ -1,11 +1,25 @@
-@import '../сolorVariables/сolorVariables';
-@import '../fontMixins/fontMixins.scss';
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
 
 .button {
   @include h3;
   outline: none;
   position: relative;
   cursor: pointer;
+  &.block_size_l {
+    padding-right: 35px;
+    &::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      -webkit-mask: url("../../font/arrow_forward.svg") no-repeat center;
+      -moz-mask: url("../../font/arrow_forward.svg") no-repeat center;
+      mask: url("../../font/arrow_forward.svg") no-repeat center;
+      background: $colorBcg;
+      right: 15px;
+      top: 12px;
+    }
+  }
   &:disabled {
     opacity: 0.5;
   }
@@ -62,21 +76,25 @@
   border: none;
   padding: 14px 20px 15px 20px;
 }
-.button_size_l {
-  width: 320px;
-  padding-right: 35px;
-  .button__arrowForward {
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    path {
-      fill: $colorBcg;
-    }
-  }
-}
+// .button.block_size_l {
+//   padding-right: 35px;
+//   &::before {
+//     content: '';
+//     width: 18px;
+//     height: 18px;
+//     position: absolute;
+//     -webkit-mask: url("../../font/arrow_forward.svg") no-repeat center;
+//     -moz-mask: url("../../font/arrow_forward.svg") no-repeat center;
+//     mask: url("../../font/arrow_forward.svg") no-repeat center;
+//     background: $colorBcg;
+//     right: 15px;
+//     top: 12px;
+//     // transform: translateY(-50%);
+//     // path {
+//     //   fill: $colorBcg;
+//     // }
+//   }
+// }
 
 // .button_size_big {
 //   width: 320px;

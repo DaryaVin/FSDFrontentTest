@@ -1,5 +1,5 @@
 mixin toggle(id, label)
-  .toggleButtonBox.spaceBetweenContener
+  .toggleButtonBox.spaceBetweenContener()&attributes(attributes)
     .toggleButtonBox__field
       input(type="checkbox", id=id, value=id).toggleButton
       .toggleButton__checkmark

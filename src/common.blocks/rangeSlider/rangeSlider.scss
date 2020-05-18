@@ -1,8 +1,7 @@
-@import '../сolorVariables/сolorVariables';
-@import '../fontMixins/fontMixins';
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
 
 .rangeSlider {
-  width: 266px;
+  width: $width_size_m;
 }
 .rangeSlider__label {
   width: 100%;

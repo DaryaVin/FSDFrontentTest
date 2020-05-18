@@ -1,5 +1,4 @@
-@import '../сolorVariables/сolorVariables';
-@import '../fontMixins/fontMixins';
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
 
 .pagination {
   width: 100%;
@@ -62,17 +61,26 @@
   .paginationjs-next {
     border-radius: 50%;
     @include linearGradient("background", $color3, $color3Gradiend);
-    &.disabled {
-      margin-left: 5px;
-      @include linearGradient("background", $color1Opacity25, $color1Opacity05);
-    }
     a {
       display: flex;
       align-content: center;
       justify-content: center;
+      position: relative;
+      min-width: 20px;
+      min-height: 20px;
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -10px;
+        background: $colorBcg;
+        -webkit-mask: url("../../font/arrow_forward.svg") no-repeat center / cover;
+        -moz-mask: url("../../font/arrow_forward.svg") no-repeat center / cover;
+        mask: url("../../font/arrow_forward.svg") no-repeat center / cover;
+      }
     }
-  }
-  .paginationjs-nav {
-    
   }
 }

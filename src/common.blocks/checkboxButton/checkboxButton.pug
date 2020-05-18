@@ -1,5 +1,5 @@
 mixin checkboxButtons(theme, name, items)
-  .checkboxButtonsGroup.colomnContener
+  .checkboxButtons.colomnContener()&attributes(attributes)
     - var theme_rich = false
     - if (theme == "rich") theme_rich = true
     each item in items

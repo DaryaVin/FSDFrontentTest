@@ -1,6 +1,6 @@
-include ../сolorVariables/сolorVariables.pug
+include ../baseVariablesAndMixins/baseVariablesAndMixins.pug
 mixin logo(colorVersion, classPosition)
-  .logo(class=(colorVersion ? "logo_colorVersion" : ""))(class=(classPosition ? classPosition : ""))
+  .logo(class=(colorVersion ? "logo_colorVersion" : ""))(class=(classPosition ? classPosition : ""))&attributes(attributes)
     .logo__emblem
       svg(width="48", height="48", viewBox="0 0 48 48", fill="none", xmlns="http://www.w3.org/2000/svg")
         +linearGradientForSVG("color2")

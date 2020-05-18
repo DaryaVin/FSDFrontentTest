@@ -1,5 +1,5 @@
-mixin guestsField(id)
-  +dropdown(id).guestsField.dropdown_theme_field
+mixin guestsField()
+  +dropdown().guestsField.dropdown_theme_field()&attributes(attributes)
     +addBlock('button')
       p Сколько гостей
     +addBlock('contener')

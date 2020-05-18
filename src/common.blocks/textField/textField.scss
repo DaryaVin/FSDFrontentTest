@@ -1,40 +1,27 @@
-@import '../сolorVariables/сolorVariables';
-@import '../fontMixins/fontMixins.scss';
-@import '../field/field.scss';
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
 
 .textField  {
   display: inline-block;
   position: relative;
-  @include field;
+  width: $width;
   &.textField_type_subscription {
     .textField__field {
-      width: 90%;
+      padding-right: 45px;
     }
-    .textField__arrowForward {
-      opacity: 1;
+    &::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 12px; right: 15px;
+      -webkit-mask: url("../../font/arrow_forward.svg") no-repeat center;
+      -moz-mask: url("../../font/arrow_forward.svg") no-repeat center;
+      mask: url("../../font/arrow_forward.svg") no-repeat center;
+      @include linearGradient(background, $color2, $color2Gradiend);
     }
   }
 }
 .textField__field {
-  outline: none;
-  border: none;
+  @include field;
   width: 100%;
-  @include baseText;
-  line-height: inherit;
-  color: $color1Opacity75;
-  &::placeholder {
-    color: $color1Opacity25;
-  }
-}
-.textField__arrowForward {
-  opacity: 0;
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  right: 11px;
-  top: 50%;
-  transform: translateY(-50%);
-  path {
-    fill: url(#color2LinearGradient);
-  }
 }

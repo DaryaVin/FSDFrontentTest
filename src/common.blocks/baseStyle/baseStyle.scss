@@ -1,32 +1,43 @@
-@import '../сolorVariables/сolorVariables';
-@import '../fontMixins/fontMixins.scss';
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
 
 *, *:before, *:after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
 body {
   @include baseText;
   color: $color1Opacity75;
 }
-
 h1 {
   @include h1;
   color: $color1;
 }
-
 h2 {
   @include h2;
   color: $color1;
 }
-
 h3 {
   @include h3;
   color: $color1;
 }
+.label {
+  @include h3;
+  color: $color1;
+  &.label_for_field {
+    padding-bottom: 5px;
+  }
+}
 
+// --------------------- Color styles ---------------------- //
+linearGradient#color2LinearGradient {
+  @include linearGradientForSVG($color2, $color2Gradiend, 0%, 100%);
+}
+linearGradient#color3LinearGradient {
+  @include linearGradientForSVG($color3, $color3Gradiend, 0%, 100%);
+}
+
+// --------------------- Position and size styles ---------------------- //
 .spaceBetweenContener {
   display: flex;
   justify-content: space-between;
@@ -35,4 +46,13 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: start;
+}
+.block_size_s {
+  width: $width_size_s;
+}
+.block_size_m {
+  width: $width_size_m;
+}
+.block_size_l {
+  width: $width_size_l;
 }

@@ -2,13 +2,11 @@ doctype html
 html(lang="ru")
   head
   body
+    include ../../common.blocks/baseVariablesAndMixins/baseVariablesAndMixins.pug
     include ../../common.blocks/logo/logo.pug
-    include ../../common.blocks/label/label.pug
-    include ../../common.blocks/arrowForward/arrowForward.pug
     include ../../common.blocks/textField/textField.pug
     include ../../common.blocks/numberPickerList/numberPickerList.pug
     include ../../common.blocks/dropdown/dropdown.pug
-    include ../../common.blocks/button/button.pug
     include ../../common.blocks/likeButton/likeButton.pug
     include ../../common.blocks/radioButton/radioButton.pug
     include ../../common.blocks/checkboxButton/checkboxButton.pug
@@ -20,7 +18,6 @@ html(lang="ru")
     include ../../common.blocks/numberPicker/numberPicker.pug
     include ../../common.blocks/guestsField/guestsField.pug
     include ../../common.blocks/equipmentField/equipmentField.pug
-    include ../../common.blocks/funcAddMultipleBlocks/funcAddMultipleBlocks.pug
     include ../../common.blocks/calendarCard/calendarCard.pug
     include ../../common.blocks/dateDropdown/dateDropdown.pug
     include ../../common.blocks/selectStartEndDates/selectStartEndDates.pug
@@ -53,21 +50,22 @@ html(lang="ru")
     .formElements
       .PresentationBlock__formField
         .colomnsContener
-          +label("Email", "text Field").label_for_field
+          label.label(for="dateMask") masked text field
+          label.label("Email", "text Field").label_for_field
           +textField("dateDropdown")#dateMask
         .colomnsContener
-          +label("Email", "text Field").label_for_field
+          label.label(for="Email").label_for_field text Field
           +textField("dateRangeField")
         .colomnsContener
-          +label("Email", "subscription text field").label_for_field
-          +textField("Email1").textField_type_subscription.field_size_m
+          label.label(for="Email").label_for_field subscription text field
+          +textField("Email1").textField_type_subscription.block_size_m
         .colomnsContener
-          +label("guests", "Гости").label_for_field
+          label.label(for="guests").label_for_field Гости
           +guestsField("guests")
         .colomnsContener
-          +label("equipment", "Удобства номера").label_for_field
-          +equipmentField("equipment").field_size_m
-        +dropdown("1").dropdown_theme_list
+          label.label(for="equipment").label_for_field Удобства номера
+          +equipmentField("equipment").block_size_m
+        +dropdown().dropdown_theme_list.block_size_m
           +addBlock('button')
             p expandable checkbox list
           +addBlock('contener')
@@ -84,19 +82,19 @@ html(lang="ru")
         +dateDropdown()#dateDropdown
         +selectStartEndDates()#selectStartEndDates
       .PresentationBlock__button
-        +button("click me", "theme_textOnly", "color_color2")
-        +button("click me", "theme_textOnly", "color_color1Opacity50")
+        button.button.button_theme_textOnly.button_color_color2 click me
+        button.button.button_theme_textOnly.button_color_color1Opacity50 click me
         br
-        +button("click me", "theme_withBorder")
-        +button("click me", "theme_withBorder")(disabled)
+        button.button.button_theme_withBorder  click me
+        button.button.button_theme_withBorder(disabled) click me
         br
-        +button("click me", "theme_fillBcg")
-        +button("click me", "theme_fillBcg")(disabled)
+        button.button.button_theme_fillBcg click me
+        button.button.button_theme_fillBcg(disabled) click me
         br
         +likeButton(false)
         +likeButton(true)
         br
-        +button("перейти к оплате", "theme_fillBcg", "size_l")
+        button.button.button_theme_fillBcg.block_size_l перейти к оплате
       .PrePresentationBlock__radioButton
         -
           var sexItems = [

@@ -1,5 +1,5 @@
 mixin radioButtons(name, items)
-  .radioButtonsGroup.spaceBetweenContener
+  .radioButtons.spaceBetweenContener()&attributes(attributes)
     each item in items
       -var id = name+"__"+item.id
       .radioButtonBox.spaceBetweenContener

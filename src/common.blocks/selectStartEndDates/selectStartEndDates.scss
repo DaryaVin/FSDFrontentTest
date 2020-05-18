@@ -1,14 +1,15 @@
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
 .selectStartEndDates {
-  .dropdown.field_size_s{
-    width: 150px;
+  .dropdown.block_size_s{
+    width: $width_size_s;
     .dropdown__dropdownButton {
-      width: 150px;
+      width: $width_size_s;
       input {
-        width: 150px;
+        width: $width_size_s;
       }
     }
     .dropdown__dropdownContener {
-      width: 320px;
+      width: $width_size_l;
     }
     &.selectStartEndDates__startDate {
       .dropdown__dropdownContener {

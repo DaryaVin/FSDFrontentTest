@@ -1,4 +1,4 @@
-@import '../../common.blocks/сolorVariables/сolorVariables';
+@import '../../common.blocks/baseVariablesAndMixins/baseVariablesAndMixins';
 
 body > * {
   margin: 40px 20px 0;
@@ -8,7 +8,7 @@ body > * {
   justify-content: space-around;
   flex-wrap: wrap;
   max-width: 1920px;
-  min-width: 320px;
+  min-width: $width_size_l;
 }
 .PresentationBlock__color {
 

@@ -1,5 +1,5 @@
 mixin rangeSlider(label)
-  .rangeSlider.colomnContener
+  .rangeSlider.colomnContener()&attributes(attributes)
     label.rangeSlider__label.spaceBetweenContener #{label}
       input.rangeSlider__amount(type="text", readonly)
     .rangeSlider__slider

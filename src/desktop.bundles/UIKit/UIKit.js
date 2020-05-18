@@ -1,5 +1,4 @@
 import '@common/logo/logo.scss';
-import '@common/label/label.scss';
 import '@common/textField/textField.scss';
 import '@common/dropdown/dropdown.js';
 import '@common/button/button.scss';
@@ -30,7 +29,7 @@ import * as dateDropdownFuncs  from  '@common/dateDropdown/dateDropdown.js';
 
 import './UIKit.scss';
 
-$("#dateMask").each(function(){
+$("#dateMask input").each(function(){
   var data = $(this);
   var minDate = new Date("1900, 01, 01"),
     maxDate = new Date();

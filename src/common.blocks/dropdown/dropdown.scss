@@ -1,7 +1,4 @@
-@import '../сolorVariables/сolorVariables';
-@import '../fontMixins/fontMixins.scss';
-@import '../field/field.scss';
-
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
 
 .dropdown {
   position: relative;
@@ -34,50 +31,42 @@
     }
   }
   &.dropdown_theme_list {
-    $width: 266px;
     .dropdown__dropdownButton {
-      width: $width;
-      // padding-right: 15px;
-      p {
-        @include h3;
-        color: $color1;
-        text-align: left;
-      }
+      @include h3;
+      color: $color1;
+      text-align: left;
       &.formField__field_version_dropdown {
         &::before {
           transform: rotate(135deg);
           margin-top: -2px;
-
         }
       }
     }
     .dropdown__dropdownContener {
       padding: 17px 7px 13px 0px;
       background: $colorBcg;
-      width: $width;
       &.show {
         position: relative;
         top: 0;
       }
     }
-
   }
-  &.field_size_m{
-    width: 266px;
+  &.block_size_m{
+    width: $width_size_m;
     .dropdown__dropdownButton {
-      width: 266px;
+      width: $width_size_m;
     }
     .dropdown__dropdownContener {
-      width: 266px;
+      width: $width_size_m;
     }
   }
-  &.field_size_s{
-    width: 150px;
+  &.block_size_s{
+    width: $width_size_s;
     .dropdown__dropdownButton {
-      width: 150px;
+      width: $width_size_s;
     }
     .dropdown__dropdownContener {
-      width: 150px;
+      width: $width_size_s;
     }
   }
 }
@@ -98,7 +87,6 @@
     border-left: 1px solid $color1Opacity75;
     transform-origin: 50% 50%;
     transform: rotate(-45deg);
-
   }
 }
 .dropdown__dropdownContener {
@@ -111,16 +99,3 @@
   position: absolute;
   top: 100%;
 }
-// .arrow {
-//   width: 7px;
-//   height: 7px;
-//   border-bottom: 1px solid $color1Opacity75;
-//   border-left: 1px solid $color1Opacity75;
-//   transform-origin: 50% 50%;
-//   transform: rotate(-45deg);
-// }
-// .dropdown__arrow {
-//   margin-top: 2px;
-//   margin-right: 3px;
-
-// }

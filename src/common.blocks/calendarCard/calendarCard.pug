@@ -1,6 +1,6 @@
 mixin calendarCard()
-  .calendarCard
+  .calendarCard()&attributes(attributes)
     .calendarCard__datepicker
     .calendarCard__buttonBox
-      +button("Применить", "theme_textOnly", "color_color2").calendarCard__executeButton
-      +button("Очистить", "theme_textOnly", "color_color1Opacity50")(hidden).calendarCard__resetButton
+      button.button.button_theme_textOnly.button_color_color2.calendarCard__executeButton Применить
+      button.button.button_theme_textOnly.button_color_color1Opacity50(hidden).calendarCard__resetButton Очистить

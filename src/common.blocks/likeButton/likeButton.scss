@@ -1,12 +1,11 @@
-@import '../сolorVariables/сolorVariables';
-@import '../fontMixins/fontMixins.scss';
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
 
 .likeButton {
   $border: 1px;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
-  line-height: 12px;  
+  line-height: 12px;
   box-sizing: border-box;
   padding: 2px 9px 4px 19px;
   color: $color1Opacity25;
@@ -31,7 +30,7 @@
 }
 .heartNoLike {
   path {
-    fill: $color1Opacity25; 
+    fill: $color1Opacity25;
   }
 }
 .likeButton__heart {
