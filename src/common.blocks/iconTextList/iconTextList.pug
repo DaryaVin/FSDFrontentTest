@@ -1,0 +1,15 @@
+mixin iconTextList(items)
+  - blocks = {}
+  block
+  .iconTextList.colomnContener()&attributes(attributes)
+    each item in items
+      .iconTextBox
+        .iconTextBox__icon
+          //- object(data=require('../../font/' + item.iconName + '.svg').default, type="image/svg+xml").iconTextBox__svg
+          svg( fill="none", xmlns="http://www.w3.org/2000/svg").iconTextBox__svg
+            +linearGradientForSVG("color2")
+            if blocks[item.iconName]
+              - blocks[item.iconName]()
+            else
+        label.iconTextBox__label(for=id) !{item.label}
+            p.iconTextBox__explanation !{item.explanation}

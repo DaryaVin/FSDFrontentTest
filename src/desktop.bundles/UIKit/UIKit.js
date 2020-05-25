@@ -20,7 +20,7 @@ import '@common/dateMask/dateMask.js';
 import '@common/calendarCard/calendarCard.js';
 import '@common/dateDropdown/dateDropdown.js';
 import '@common/selectStartEndDates/selectStartEndDates.js';
-
+import '@common/iconTextList/iconTextList.scss';
 
 import * as calendarCardFuncs from '@common/calendarCard/calendarCard.js';
 import * as dateFuncs from '@common/dateMask/dateMask.js';

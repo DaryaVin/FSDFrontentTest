@@ -106,7 +106,7 @@ module.exports = {
             }
           }
         ]
-      },      
+      },
       {
         test: /\.css$/,
         use: cssLoaders()
@@ -129,7 +129,7 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-            options:{ 
+            options:{
               presets: ['@babel/preset-env']
             }
           }
