@@ -1,0 +1,10 @@
+mixin authCard()
+  form(action="#", method="post").card.authCard.colomnsContener
+    h1 Войти
+    section.card__section
+      +textField('Email').email
+      +textField('Пароль').password
+    button.button.button_theme_fillBcg.button_theme_withArrow.block_size_l Войти
+    section.card__buttonLinc.card__section.spaceBetweenContener
+      p Нет аккаунта на Toxin?
+      button.button.button_theme_withBorder Создать

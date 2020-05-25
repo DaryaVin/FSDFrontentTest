@@ -22,6 +22,7 @@ html(lang="ru")
     include ../../common.blocks/dateDropdown/dateDropdown.pug
     include ../../common.blocks/selectStartEndDates/selectStartEndDates.pug
     include ../../common.blocks/iconTextList/iconTextList.pug
+    include ../../common.blocks/authCard/authCard.pug
 
 
     .colorAndType
@@ -82,6 +83,7 @@ html(lang="ru")
         +dateDropdown().dateDropdown_theme_dateRange
         +dateDropdown()#dateDropdown
         +selectStartEndDates()#selectStartEndDates
+        +authCard()
       .PresentationBlock__button
         button.button.button_theme_textOnly.button_color_color2 click me
         button.button.button_theme_textOnly.button_color_color1Opacity50 click me

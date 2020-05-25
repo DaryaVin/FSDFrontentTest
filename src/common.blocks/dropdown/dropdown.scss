@@ -2,6 +2,7 @@
 
 .dropdown {
   position: relative;
+  max-width: $width_size_l;
   &.dropdown_theme_field {
     .dropdown__dropdownButton {
       @include field;

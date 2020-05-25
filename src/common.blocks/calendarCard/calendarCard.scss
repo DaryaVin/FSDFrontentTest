@@ -5,7 +5,7 @@
   border: 1px solid $color1Opacity25;
   box-shadow: 0px 10px 20px $color1Opacity05;
   border-radius: 4px;
-
+  max-width: $width_size_l;
 }
 .calendarCard__buttonBox {
   display: flex;

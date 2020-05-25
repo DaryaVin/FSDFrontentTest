@@ -5,21 +5,6 @@
   outline: none;
   position: relative;
   cursor: pointer;
-  &.block_size_l {
-    padding-right: 35px;
-    &::before {
-      content: '';
-      width: 18px;
-      height: 18px;
-      position: absolute;
-      -webkit-mask: url("../../font/arrow_forward.svg") no-repeat center;
-      -moz-mask: url("../../font/arrow_forward.svg") no-repeat center;
-      mask: url("../../font/arrow_forward.svg") no-repeat center;
-      background: $colorBcg;
-      right: 15px;
-      top: 12px;
-    }
-  }
   &:disabled {
     opacity: 0.5;
   }
@@ -76,46 +61,19 @@
   border: none;
   padding: 14px 20px 15px 20px;
 }
-// .button.block_size_l {
-//   padding-right: 35px;
-//   &::before {
-//     content: '';
-//     width: 18px;
-//     height: 18px;
-//     position: absolute;
-//     -webkit-mask: url("../../font/arrow_forward.svg") no-repeat center;
-//     -moz-mask: url("../../font/arrow_forward.svg") no-repeat center;
-//     mask: url("../../font/arrow_forward.svg") no-repeat center;
-//     background: $colorBcg;
-//     right: 15px;
-//     top: 12px;
-//     // transform: translateY(-50%);
-//     // path {
-//     //   fill: $colorBcg;
-//     // }
-//   }
-// }
-
-// .button_size_big {
-//   width: 320px;
-//   padding-right: 35px;
-//   &::before {
-//     content: "";
-//     width: 14px;
-//     border-bottom: 1.8px solid $colorBcg;
-//     position: absolute;
-//     right: 16px;
-//     top: 20.9px;
-//   }
-//   &::after {
-//     content: "";
-//     width: 10px;
-//     height: 10px;
-//     border-right: 2px solid $colorBcg;
-//     border-bottom: 2px solid $colorBcg;
-//     transform: rotate(-45deg);
-//     position: absolute;
-//     right: 16px;
-//     top: 15.9px;
-//   }
-// }
+.button_theme_withArrow {
+  padding-right: 35px;
+  padding-left: 35px;
+  &::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    -webkit-mask: url("../../font/arrow_forward.svg") no-repeat center;
+    -moz-mask: url("../../font/arrow_forward.svg") no-repeat center;
+    mask: url("../../font/arrow_forward.svg") no-repeat center;
+    background: $colorBcg;
+    right: 15px;
+    top: 12px;
+  }
+}

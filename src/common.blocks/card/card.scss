@@ -1,0 +1,27 @@
+@import '../baseVariablesAndMixins/baseVariablesAndMixins.scss';
+
+.card {
+  padding: 40px 30px 30px 30px;
+  box-shadow: 0px 0px 25px $color1Opacity05;
+  border-radius: 4px;
+  border: 1px solid $color1Opacity05;
+  & > *:not(:last-child) {
+    margin-bottom: 20px;
+    max-width: $width_size_l;
+  }
+  .card__section {
+    & > *:not(:last-child):not(p) {
+      margin-bottom: 10px;
+    }
+  }
+  .card__buttonLinc {
+    margin-top: 10px;
+    align-items: center;
+    p {
+      align-items: center;
+      text-align: center;
+      line-height: 18px;
+      margin: 0;
+    }
+  }
+}
