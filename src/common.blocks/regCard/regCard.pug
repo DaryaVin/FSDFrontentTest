@@ -1,0 +1,24 @@
+mixin regCard()
+  form(action="#", method="post").card.regCard.colomnsContener
+    h1 Регистрация аккаунта
+    section.card__section
+      +textField('Имя')
+      +textField('Фамилия')
+      -
+        var regCard__sexItems = [
+          {id:'boy', label:'Мужчина'},
+          {id:'girl', label:'Женщина'}
+        ];
+      +radioButtons("regCard__sex", regCard__sexItems)
+    section.card__section
+      label.label.label_for_field дата рождения
+      +textField().regCard__birthdayField
+    section.card__section
+      label.label.label_for_field данные для входа в сервис
+      +textField('Email')
+      +textField('Пароль', 'password')
+      +toggle('true','Получать спецпредложения').regCard__specialOffer
+    button.button.button_theme_fillBcg.button_theme_withArrow.block_size_l перейти к оплате
+    section.card__buttonLinc.card__section.spaceBetweenContener
+      p Уже есть аккаунт на Toxin
+      a.button.button_theme_withBorder войти

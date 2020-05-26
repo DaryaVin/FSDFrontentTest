@@ -39,6 +39,10 @@ linearGradient#color3LinearGradient {
 }
 
 // --------------------- Position and size styles ---------------------- //
+.startContener {
+  display: flex;
+  justify-content: start;
+}
 .spaceBetweenContener {
   display: flex;
   justify-content: space-between;

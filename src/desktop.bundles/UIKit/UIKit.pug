@@ -23,6 +23,7 @@ html(lang="ru")
     include ../../common.blocks/selectStartEndDates/selectStartEndDates.pug
     include ../../common.blocks/iconTextList/iconTextList.pug
     include ../../common.blocks/authCard/authCard.pug
+    include ../../common.blocks/regCard/regCard.pug
 
 
     .colorAndType
@@ -53,7 +54,7 @@ html(lang="ru")
       .PresentationBlock__formField
         .colomnsContener
           label.label(for="dateMask") masked text field
-          label.label("Email", "text Field").label_for_field
+          //- label.label("Email", "text Field").label_for_field
           +textField("dateDropdown")#dateMask
         .colomnsContener
           label.label(for="Email").label_for_field text Field
@@ -84,6 +85,7 @@ html(lang="ru")
         +dateDropdown()#dateDropdown
         +selectStartEndDates()#selectStartEndDates
         +authCard()
+        +regCard()
       .PresentationBlock__button
         button.button.button_theme_textOnly.button_color_color2 click me
         button.button.button_theme_textOnly.button_color_color1Opacity50 click me
@@ -104,7 +106,7 @@ html(lang="ru")
             {id:'boy', label:'Мужчина'},
             {id:'girl', label:'Женщина'}
           ];
-        +radioButtons("sex", sexItems)
+        +radioButtons("sex1", sexItems)
       .PrePresentationBlock__checkboxButton
         -
           var accommodationsItems = [

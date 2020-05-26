@@ -1,5 +1,6 @@
 @import '../baseVariablesAndMixins/baseVariablesAndMixins';
 .selectStartEndDates {
+  max-width: $width_size_l;
   .dropdown.block_size_s{
     width: $width_size_s;
     .dropdown__dropdownButton {

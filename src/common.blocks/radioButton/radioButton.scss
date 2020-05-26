@@ -5,14 +5,18 @@
   color: $color1Opacity50;
 }
 .radioButtonBox {
-  margin-right: 20px;
   align-items: center;
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
   * {
     cursor: pointer;
   }
 }
 .radioButtonBox__field {
   position: relative;
+  display: flex;
+  align-items: center;
   .radioButton:checked ~ .radioButton__checkmark {
     border-color: $color2;
     .radioButton__checkmarkInnerPoint {

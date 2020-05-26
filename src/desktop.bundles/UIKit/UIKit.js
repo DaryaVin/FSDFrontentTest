@@ -23,6 +23,7 @@ import '@common/selectStartEndDates/selectStartEndDates.js';
 import '@common/iconTextList/iconTextList.scss';
 import '@common/authCard/authCard.scss';
 import '@common/card/card.scss';
+import '@common/regCard/regCard.js';
 
 import * as calendarCardFuncs from '@common/calendarCard/calendarCard.js';
 import * as dateFuncs from '@common/dateMask/dateMask.js';

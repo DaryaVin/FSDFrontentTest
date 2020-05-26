@@ -10,7 +10,7 @@
     max-width: $width_size_l;
   }
   .card__section {
-    & > *:not(:last-child):not(p) {
+    & > div:not(:last-child) {
       margin-bottom: 10px;
     }
   }
@@ -21,7 +21,6 @@
       align-items: center;
       text-align: center;
       line-height: 18px;
-      margin: 0;
     }
   }
 }

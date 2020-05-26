@@ -12,6 +12,7 @@
   border: $border solid transparent;
   border-radius: 10px;
   background-clip: padding-box;
+  min-width: 10px;
   &::before {
     margin: -$border;
     background: $color1Opacity25;
