@@ -6,13 +6,13 @@
 }
 .numberPicker__minusBtn, .numberPicker__plusBtn {
   box-sizing: border-box;
+  min-width: 30px;
   width: 30px;
   height: 30px;
   background-color: transparent;
   border: 1px solid $color1Opacity25;
   color: $color1Opacity50;
   border-radius: 50%;
-  outline: none;
   &:active {
     transform: scale(0.95, 0.95);
   }

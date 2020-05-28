@@ -1,0 +1,6 @@
+mixin searchHotelRoomCard()
+  form(action="#", method="post").card.searchHotelRoomCard.colomnsContener
+    h1 Найдём номера под ваши пожелания
+    +selectStartEndDates("прибытие", "выезд")
+    +guestsField()
+    button.button.button_theme_fillBcg.button_theme_withArrow.block_size_l подобрать номер

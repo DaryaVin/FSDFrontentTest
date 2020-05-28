@@ -7,6 +7,9 @@ $('.calendarCard').each(function() {
   calendar = calendarCard.find('.calendarCard__datepicker'),
   resetButton = calendarCard.find('.calendarCard__resetButton'),
   executeButton = calendarCard.find('.calendarCard__executeButton');
+
+  resetButton.css('display', 'none');
+
   var optDatepicker = {
     dateFormat: 'dd.mm.yy',
     showOtherMonths: true,
@@ -33,16 +36,19 @@ $('.calendarCard').each(function() {
   calendar.datepicker(optDatepicker);
 
   calendar.change(function(){
-    resetButton.prop('hidden', false);
+    // resetButton.prop('hidden', false);
+    resetButton.css('display', 'flex');
   });
 
   executeButton.click(function() {
-    resetButton.prop('hidden', false);
+    // resetButton.prop('hidden', false);
+    resetButton.css('display', 'flex');
   });
 
   resetButton.click(function() {
     calendar.datepicker("setDate");
-    resetButton.prop('hidden', true);
+    resetButton.css('display', 'none');
+    // resetButton.prop('hidden', true);
     // console.log(calendar.datepicker('widget').data('datepickerExtensionRange'));
   });
 

@@ -6,11 +6,14 @@ $('.guestsField').each(function() {
     executeButton = guestsField.find('.numberPickerList__executeButton'),
     numbers = guestsField.find('input[type="number"].numberPicker__number');
 
-
+    resetButton.css('display', 'none');
     resetButton.click(function() {
       numbers.val(0);
       numbers.trigger("change");
-      resetButton.prop('hidden', true);
+      resetButton.css('display', 'none');
+      if (title.text() != "Сколько гостей") {
+        title.text('Количество гостей не указано');
+      }
     });
 
     executeButton.click(function() {
@@ -62,7 +65,7 @@ $('.guestsField').each(function() {
       for (let i = 0; i < numbers.length; i++) {
         sumGoustes += parseFloat(numbers[i].value);
       };
-      if (sumGoustes != 0) resetButton.prop('hidden', false);
-      else resetButton.prop('hidden', true);
+      if (sumGoustes != 0) resetButton.css('display', 'flex');
+      else resetButton.css('display', 'none');
     });
 })

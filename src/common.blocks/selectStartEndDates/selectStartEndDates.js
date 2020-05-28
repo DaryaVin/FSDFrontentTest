@@ -8,23 +8,32 @@ $(".selectStartEndDates").each(function() {
     startDateDropdown = selectStartEndDates.find('.selectStartEndDates__startDate'),
       fieldStartDate = startDateDropdown.find('.dropdown__dropdownButton input'),
       calendarStartDate = startDateDropdown.find('.calendarCard__datepicker'),
+      resetButtonStartDate = startDateDropdown.find(".calendarCard__resetButton"),
     endtDateDropdown = selectStartEndDates.find('.selectStartEndDates__endDate'),
       fieldEndDate= endtDateDropdown.find('.dropdown__dropdownButton input'),
-      calendarEndDate= endtDateDropdown.find('.calendarCard__datepicker');
+      calendarEndDate= endtDateDropdown.find('.calendarCard__datepicker'),
+      resetButtonEndDate = endtDateDropdown.find(".calendarCard__resetButton"),
+    minDate = calendarEndDate.datepicker( "option", "minDate"),
+    maxDate = calendarEndDate.datepicker( "option", "maxDate");
 
-  // calendarStartDate.datepicker("onSelect", function() {
-  //   calendarEndDate.datepicker( "option", "minDate", date );
-  // })
   calendarStartDate.change(function() {
     if (fieldStartDate.inputmask("isComplete")) {
       calendarEndDate.datepicker( "option", "minDate", calendarStartDate.datepicker('getDate') );
     }
   });
+  resetButtonStartDate.click(function() {
+    calendarEndDate.datepicker( "option", "minDate", minDate);
+  });
+
   calendarEndDate.change(function() {
     if (fieldEndDate.inputmask("isComplete")) {
       calendarStartDate.datepicker( "option", "maxDate", calendarEndDate.datepicker('getDate') );
     }
   });
+  resetButtonEndDate.click(function() {
+    calendarStartDate.datepicker( "option", "maxDate", maxDate);
+  });
+
 });
 
 export function addMinMaxDates(date, minDate = null, maxDate = null) {

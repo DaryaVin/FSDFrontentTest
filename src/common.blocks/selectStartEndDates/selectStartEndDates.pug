@@ -1,4 +1,8 @@
-mixin selectStartEndDates()
+mixin selectStartEndDates(labelStartDate, labelEndDate)
   .selectStartEndDates.spaceBetweenContener()&attributes(attributes)
-    +dateDropdown().block_size_s.selectStartEndDates__startDate
-    +dateDropdown().block_size_s.selectStartEndDates__endDate
+    .columnsContener.block_size_s
+      label.label.label_for_field !{labelStartDate}
+      +dateDropdown().block_size_s.selectStartEndDates__startDate
+    .columnsContener.block_size_s
+      label.label.label_for_field !{labelEndDate}
+      +dateDropdown().block_size_s.selectStartEndDates__endDate

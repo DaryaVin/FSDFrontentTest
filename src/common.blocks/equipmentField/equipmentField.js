@@ -48,15 +48,22 @@ $('.equipmentField').each(function() {
         ["ванных комнат", "ванная комната", "ванные комнаты"]
       ];
       var titleStr = '';
+      var allZero = true;
       for (let i = 0; i < numbers.length; i++) {
         var numberVal = parseFloat(numbers[i].value);
-        var variant =  numberVariantStr(numberVal);
-        if ((variant < 0) || (variant > 2)) variant = 2;
-        if (numberVal > 0) {
-          if (titleStr != '') titleStr += ", ";
-          titleStr += numberVal + " " + variantStr[i][variant];
+        if (numberVal != 0) {
+          allZero = false;
+          var variant =  numberVariantStr(numberVal);
+          if ((variant < 0) || (variant > 2)) variant = 2;
+          if (numberVal > 0) {
+            if (titleStr != '') titleStr += ", ";
+            titleStr += numberVal + " " + variantStr[i][variant];
+          }
         }
       };
+      if (allZero) {
+        titleStr = "Удобства номера";
+      }
       title.text(titleStr);
     });
 })
