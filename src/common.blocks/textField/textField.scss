@@ -14,9 +14,9 @@
       height: 18px;
       position: absolute;
       top: 12px; right: 15px;
-      -webkit-mask: url("../../font/arrow_forward.svg") no-repeat center;
-      -moz-mask: url("../../font/arrow_forward.svg") no-repeat center;
-      mask: url("../../font/arrow_forward.svg") no-repeat center;
+      -webkit-mask: url("../../img/arrow_forward.svg") no-repeat center;
+      -moz-mask: url("../../img/arrow_forward.svg") no-repeat center;
+      mask: url("../../img/arrow_forward.svg") no-repeat center;
       @include linearGradient(background, $color2, $color2Gradiend);
     }
   }

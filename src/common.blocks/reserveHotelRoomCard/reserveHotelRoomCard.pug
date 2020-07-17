@@ -1,0 +1,19 @@
+mixin reserveHotelRoomCard(number, price, isLux)
+  form(action="#", method="post").card.reserveHotelRoomCard.columnsContener
+    .reserveHotelRoomCard__infoHotelRoom.spaceBetweenContener.section.card__section
+      h1.reserveHotelRoomCard__numberHotelRoom.numberHotelRoom(class=isLux ? "isLux":"")= number
+      .reserveHotelRoomCard__price.priceHotelRoom
+        .price= price
+    section.card__section
+      +selectStartEndDates("прибытие", "выезд")
+    section.card__section
+      label.label.label_for_field Гости
+      +guestsField()
+    section.card__section
+      .reserveHotelRoomCard__calcPayment.columnsContener
+        .columnsContener
+          .reserveHotelRoomCard__primaryPayment.spaceBetweenContener
+          .reserveHotelRoomCard__serviceCharge.spaceBetweenContener
+          .reserveHotelRoomCard__additionalServiceCharge.spaceBetweenContener
+        .reserveHotelRoomCard__totalPayment.spaceBetweenContener
+    button.button.button_theme_fillBcg.button_theme_withArrow.block_size_l Забронировать

@@ -7,7 +7,7 @@ $(function() {
     var sources = function () {
       var result = [];
       for (var i = 1; i < 175; i++) {
-        result.push(i);
+        result.push(`<p>Привет <i>мир</i>!!!</p>`+i);
       }
       return result;
     }();

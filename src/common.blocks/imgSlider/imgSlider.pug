@@ -1,0 +1,11 @@
+mixin imgSlider(img)
+  .imgSlider()&attributes(attributes)
+    ul.imgSlider__imgList
+      each item in img
+        li.imgSlider__imgElement
+          img(src=require('../../img/' + item).default, alt=item)
+    a.imgSlider__btn.imgSlider__prev
+    a.imgSlider__btn.imgSlider__next
+    ul.imgSlider__dotList
+      each item in img
+        li.imgSlider__dotElement

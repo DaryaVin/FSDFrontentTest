@@ -25,6 +25,9 @@ html(lang="ru")
     include ../../common.blocks/authCard/authCard.pug
     include ../../common.blocks/regCard/regCard.pug
     include ../../common.blocks/searchHotelRoomCard/searchHotelRoomCard.pug
+    include ../../common.blocks/imgSlider/imgSlider.pug
+    include ../../common.blocks/hotelRoomCard/hotelRoomCard.pug
+    include ../../common.blocks/reserveHotelRoomCard/reserveHotelRoomCard.pug
 
 
     .colorAndType
@@ -53,20 +56,20 @@ html(lang="ru")
         p This is the body text which is used for most of the design, like paragraphs, lists, etc.
     .formElements
       .PresentationBlock__formField
-        .colomnsContener
+        .columnsContener
           label.label(for="dateMask") masked text field
           //- label.label("Email", "text Field").label_for_field
           +textField("dateDropdown")#dateMask
-        .colomnsContener
+        .columnsContener
           label.label(for="Email").label_for_field text Field
           +textField("dateRangeField")
-        .colomnsContener
+        .columnsContener
           label.label(for="Email").label_for_field subscription text field
           +textField("Email1").textField_type_subscription.block_size_m
-        .colomnsContener
+        .columnsContener
           label.label(for="guests").label_for_field Гости
           +guestsField("guests")
-        .colomnsContener
+        .columnsContener
           label.label(for="equipment").label_for_field Удобства номера
           +equipmentField("equipment").block_size_m
         +dropdown().dropdown_theme_list.block_size_m
@@ -81,13 +84,10 @@ html(lang="ru")
               ];
             +checkboxButtons("","additionalServices", additionalServicesItems)
         +textField("calendarCardField")
-        +calendarCard()
         +dateDropdown().dateDropdown_theme_dateRange
         +dateDropdown()#dateDropdown
         +selectStartEndDates("Прибытие", "Отбытие")#selectStartEndDates
-        +authCard()
-        +regCard()
-        +searchHotelRoomCard()
+
       .PresentationBlock__button
         .button.button_theme_textOnly.button_color_color2 click me
         .button.button_theme_textOnly.button_color_color1Opacity50 click me
@@ -165,5 +165,11 @@ html(lang="ru")
         +rangeSlider("Range Slider")
       +pagination()
     .cards
+      +calendarCard()
+      +authCard()
+      +regCard()
+      +searchHotelRoomCard()
+      +hotelRoomCard(888, 9990, true, 145, 5, ['n888/1.jpg', 'n888/2.jpg', 'n888/3.jpg'])
+      +reserveHotelRoomCard(888, 9990, true)
     .headers
     .footers

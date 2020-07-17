@@ -1,6 +1,9 @@
 mixin searchHotelRoomCard()
-  form(action="#", method="post").card.searchHotelRoomCard.colomnsContener
+  form(action="#", method="post").card.searchHotelRoomCard.columnsContener
     h1 Найдём номера под ваши пожелания
-    +selectStartEndDates("прибытие", "выезд")
-    +guestsField()
+    section.card__section
+      +selectStartEndDates("прибытие", "выезд")
+    section.card__section
+      label.label.label_for_field Гости
+      +guestsField()
     button.button.button_theme_fillBcg.button_theme_withArrow.block_size_l подобрать номер

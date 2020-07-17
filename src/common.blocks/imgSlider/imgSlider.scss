@@ -1,0 +1,96 @@
+@import '../baseVariablesAndMixins/baseVariablesAndMixins';
+
+.imgSlider {
+  position: relative;
+  &:hover .imgSlider__btn{
+		opacity: 1;
+	}
+}
+.imgSlider__imgElement {
+  display: block;
+  list-style: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+      opacity: .7;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+      opacity: .7;
+  }
+  to {
+      opacity: 1;
+  }
+}
+.imgSlider__btn {
+  position: absolute;
+  top: 0;bottom: 0;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $colorBcg;
+  transition: all .3s;
+	opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid $colorBcg;
+    border-left: 2px solid $colorBcg;
+    transform-origin: 50% 50%;
+  }
+}
+.imgSlider__prev {
+  left: 0;
+  background:  linear-gradient(90deg, rgba(0,0,0,0.5) 0%, transparent 100%);
+  &::before {
+    transform: rotate(45deg);
+  }
+}
+.imgSlider__next {
+  right: 0;
+  background:  linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.5) 100%);
+  &::before {
+    transform: rotate(-135deg);
+  }
+
+}
+.imgSlider__dotList {
+  position: absolute;
+  bottom: 15px; right: 15px;
+  display: flex;
+  max-width: $width_size_m - 30px;
+  z-index: 3;
+}
+.imgSlider__dotElement {
+  width: 7.5px;
+  height: 7.5px;
+  background: transparent;
+  border: 1px solid $colorBcg;
+  border-radius: 50%;
+  list-style: none;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-right: 3px;
+  }
+  &:hover, &.active {
+    background: $colorBcg;
+  }
+}

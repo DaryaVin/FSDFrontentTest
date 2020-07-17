@@ -1,0 +1,11 @@
+mixin hotelRoomCard(number, price, isLux, numberOfReviews, rating, img)
+  .hotelRoomCard
+    +imgSlider(img).hotelRoomCard__imgSlider
+    .hotelRoomCard__info
+      .spaceBetweenContener
+        h2.hotelRoomCard__numberHotelRoom.numberHotelRoom(class=isLux ? "isLux":"")= number
+        .hotelRoomCard__price.priceHotelRoom
+          .price= price
+      .spaceBetweenContener
+        +rateBox("hotelRoomCard__rateBox-" + number, rating).hotelRoomCard__rating
+        .hotelRoomCard__numberOfReviews= numberOfReviews
