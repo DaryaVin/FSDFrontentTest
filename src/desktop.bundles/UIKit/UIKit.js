@@ -1,4 +1,6 @@
 import '@common/logo/logo.scss';
+import '@common/price/price.scss';
+import '@common/price/price.js';
 import '@common/textField/textField.scss';
 import '@common/dropdown/dropdown.js';
 import '@common/button/button.scss';
