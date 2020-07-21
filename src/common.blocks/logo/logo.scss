@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 48px;
+  width: 40px;
   &.logo_colorVersion {
     width: 106px;
   }
@@ -12,9 +12,8 @@
 
 .logo__emblem {
   position: relative;
-  width: 48px;
-  height: 48px;
-
+  width: 40px;
+  height: 40px;
   path {
     fill: $color1Opacity25;
   }
@@ -22,19 +21,19 @@
 
 .logo__emblem_side_left {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   position: absolute;
-  top: 33%;
-  left: 23%;
+  top: 38%;
+  left: 23.5%;
 }
 .logo__emblem_side_right {
   display: inline-block;
-  width: 12px;
-  height: 8px;
+  width: 9.5px;
+  height: 6.5px;
   position: absolute;
-  left: 52%;
-  top: 19%;
+  right: 23.5%;
+  top: 38%;
 }
 
 .logo_colorVersion path {
@@ -44,9 +43,9 @@
   fill: url(#color3LinearGradient);
 }
 .logo__lettering {
-  display: inline-block;
   width: 54px;
   height: 14px;
+  margin-left: 12px;
   path {
     fill: $color1;
   }

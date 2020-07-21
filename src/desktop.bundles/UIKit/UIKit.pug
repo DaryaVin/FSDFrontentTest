@@ -28,6 +28,7 @@ html(lang="ru")
     include ../../common.blocks/imgSlider/imgSlider.pug
     include ../../common.blocks/hotelRoomCard/hotelRoomCard.pug
     include ../../common.blocks/reserveHotelRoomCard/reserveHotelRoomCard.pug
+    include ../../common.blocks/header/header.pug
 
 
     .colorAndType
@@ -171,5 +172,6 @@ html(lang="ru")
       +searchHotelRoomCard()
       +hotelRoomCard(888, 9990, true, 145, 5, ['n888/1.jpg', 'n888/2.jpg', 'n888/3.jpg'])
       +reserveHotelRoomCard(888, 9990, true)
-    .headers
+    .header
+      +header()
     .footers

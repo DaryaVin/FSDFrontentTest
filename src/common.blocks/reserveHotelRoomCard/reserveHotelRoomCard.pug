@@ -1,5 +1,5 @@
 mixin reserveHotelRoomCard(number, price, isLux)
-  form(action="#", method="post").card.reserveHotelRoomCard.columnsContener
+  form(action="#", method="post").card.reserveHotelRoomCard.columnsContener()&attributes(attributes)
     .reserveHotelRoomCard__infoHotelRoom.spaceBetweenContener.section.card__section
       h1.reserveHotelRoomCard__numberHotelRoom.numberHotelRoom(class=isLux ? "isLux":"")= number
       .reserveHotelRoomCard__price.priceHotelRoom
