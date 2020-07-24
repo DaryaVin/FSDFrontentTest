@@ -31,6 +31,7 @@ import '@common/hotelRoomCard/hotelRoomCard.scss';
 import '@common/hotelRoomCard/hotelRoomCard.js';
 import '@common/regCard/regCard.js';
 import '@common/header/header.scss';
+import '@common/footer/footer.scss';
 
 import * as calendarCardFuncs from '@common/calendarCard/calendarCard.js';
 import * as dateFuncs from '@common/dateMask/dateMask.js';

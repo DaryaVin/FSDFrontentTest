@@ -1,38 +1,22 @@
-mixin header()
+mixin header(menuItems)
   .header()&attributes(attributes)
     .header__contener.spaceBetweenContener
       +logo(true).header__logo
       nav.header__nav
         ul.menu.header__menu
-          li.menu__item
-            a(href="/") Home
-          li.menu__item
-            a(href="/") About Us
-          li.menu__item
-            +dropdown().menuDropdown
-              +addBlock('button')
-                span Services
-              +addBlock('contener')
-                ul
-                  li.menuDropdown__item
-                    a(href="/") Service 1
-                  li.menuDropdown__item
-                    a(href="/") Service 2
-          li.menu__item
-            a(href="/") Careers
-          li.menu__item
-            a(href="/") News
-          li.menu__item
-            a(href="/") Documentation
-            //- +dropdown().menuDropdown
-            //-   +addBlock('button')
-            //-     span Documentation
-            //-   +addBlock('contener')
-            //-     ul
-            //-       li.menuDropdown__item
-            //-         a(href="/") Documentation 1
-            //-       li.menuDropdown__item
-            //-         a(href="/") Documentation 2
+          each item in menuItems
+            li.menu__item
+              if (item.subMenu)
+                +dropdown().menuDropdown
+                  +addBlock('button')
+                    span= item.label
+                  +addBlock('contener')
+                    ul
+                      each subItem in item.subMenu
+                        li.menuDropdown__item
+                          a(href=subItem.href)= subItem.label
+              else
+                a(href=item.href)= item.label
         .header__authUser.spaceBetweenContener
           .button.button_theme_withBorder Login
           .button.button_theme_fillBcg REGISTER

@@ -22,6 +22,15 @@ h3 {
   @include h3;
   color: $color1;
 }
+a {
+  text-transform: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
 .label {
   @include h3;
   color: $color1;

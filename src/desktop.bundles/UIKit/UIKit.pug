@@ -1,6 +1,7 @@
 doctype html
 html(lang="ru")
   head
+    meta(name="viewport", content="width=device-width")
   body
     include ../../common.blocks/baseVariablesAndMixins/baseVariablesAndMixins.pug
     include ../../common.blocks/logo/logo.pug
@@ -29,6 +30,7 @@ html(lang="ru")
     include ../../common.blocks/hotelRoomCard/hotelRoomCard.pug
     include ../../common.blocks/reserveHotelRoomCard/reserveHotelRoomCard.pug
     include ../../common.blocks/header/header.pug
+    include ../../common.blocks/footer/footer.pug
 
 
     .colorAndType
@@ -59,7 +61,6 @@ html(lang="ru")
       .PresentationBlock__formField
         .columnsContener
           label.label(for="dateMask") masked text field
-          //- label.label("Email", "text Field").label_for_field
           +textField("dateDropdown")#dateMask
         .columnsContener
           label.label(for="Email").label_for_field text Field
@@ -173,5 +174,127 @@ html(lang="ru")
       +hotelRoomCard(888, 9990, true, 145, 5, ['n888/1.jpg', 'n888/2.jpg', 'n888/3.jpg'])
       +reserveHotelRoomCard(888, 9990, true)
     .header
-      +header()
-    .footers
+      -
+        var headerMenuEng = [
+          {
+            label: "Home",
+            href: "/"
+          },
+          {
+            label: "About Us",
+            href: "/"
+          },
+          {
+            label: "Services",
+            subMenu: [
+              {
+                label: "Service 1",
+                href: "/"
+              },
+              {
+                label: "Service 2",
+                href: "/"
+              }
+            ]
+          },
+          {
+            label: "Careers",
+            href: "/"
+          },
+          {
+            label: "News",
+            href: "/"
+          },
+          {
+            label: "Documentation",
+            subMenu: [
+              {
+                label: "Documentation 1",
+                href: "/"
+              },
+              {
+                label: "Documentation 2",
+                href: "/"
+              }
+            ]
+          }
+        ];
+      +header(headerMenuEng)
+    .footer
+      -
+        var footerMenuEng = [
+          {
+            title: "Navigation",
+            subItems: [
+              {
+                label: "About Us",
+                href: "/"
+              },
+              {
+                label: "News",
+                href: "/"
+              },
+              {
+                label: "Support",
+                href: "/"
+              },
+              {
+                label: "Products",
+                href: "/"
+              }
+            ]
+          },
+          {
+            title: "ABOUT US",
+            subItems: [
+              {
+                label: "Who we are",
+                href: "/"
+              },
+              {
+                label: "Our team",
+                href: "/"
+              },
+              {
+                label: "Careers",
+                href: "/"
+              },
+              {
+                label: "Investors",
+                href: "/"
+              }
+            ]
+          },
+          {
+            title: "Support",
+            subItems: [
+              {
+                label: "Documentation",
+                href: "/"
+              },
+              {
+                label: "Community",
+                href: "/"
+              },
+              {
+                label: "Get in Touch",
+                href: "/"
+              }
+            ]
+          }
+        ];
+        var footerContent = {
+          aboutCompany: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta odit unde magnam atque.",
+          subscribe: {
+            label: "Subscribe to our newsletter",
+            text: "Receive our latest news and promotions in your inbox!",
+            textField: "Your email address"
+          },
+          copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved.",
+          socLinc: {
+            twitter: "/",
+            facebook: "/",
+            instagram: "/"
+          }
+        }
+      +footer(footerContent, footerMenuEng)
